@@ -1,0 +1,3117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growth Matrix Digital | Skill Academy</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="description" content="Growth Matrix Digital (GMD) - Abu Khabib Yaseen ki aguwai me Pakistan ki premium online academy. Seekhein AI Web Development, Digital Marketing, Shopify, aur AI." />
+    <script>
+      (function() {
+        const theme = localStorage.getItem('theme') || 'light';
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+        }
+      })();
+    </script>
+    
+    <style>
+      /* Custom Premium CSS Design System (Color Combined with GMD Logo) */
+      :root {
+        --bg-primary: #ffffff;
+        --bg-secondary: #f8fafc;
+        --bg-tertiary: #f1f5f9;
+        
+        --bg-navy: #122947;           /* Exact Deep Navy from Logo */
+        --primary-accent: #cfa240;     /* Exact Gold from Logo */
+        --secondary-accent: #0fa396;   /* Exact Teal from Logo arrow */
+        
+        --text-primary: #122947;       /* Dark Navy for headings */
+        --text-secondary: #334155;     /* Slate for body text */
+        --text-muted: #64748b;
+        
+        --border-gold: rgba(207, 162, 64, 0.3);
+        --border-blue: rgba(18, 41, 71, 0.25);
+        --border-light: #e2e8f0;
+
+        --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+        --font-tech: 'Orbitron', monospace;
+
+        --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        --transition-elastic: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-primary);
+        color: var(--text-secondary);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        overflow-x: hidden;
+        position: relative;
+        background-image: 
+          radial-gradient(circle at 10% 20%, rgba(207, 162, 64, 0.03) 0%, transparent 45%),
+          radial-gradient(circle at 90% 80%, rgba(18, 41, 71, 0.03) 0%, transparent 45%),
+          radial-gradient(rgba(18, 41, 71, 0.06) 1.2px, transparent 1.2px);
+        background-size: 100% 100%, 100% 100%, 24px 24px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-secondary);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--bg-navy);
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: var(--font-sans);
+        font-weight: 700;
+        color: var(--bg-navy);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Card layouts */
+      .glass {
+        background: #ffffff;
+        border: 1px solid var(--border-light);
+        border-radius: 8px;
+        transition: var(--transition-smooth);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      }
+
+      .glass-gold {
+        background: #ffffff;
+        border: 1px solid var(--primary-accent);
+        box-shadow: 0 4px 15px rgba(207, 162, 64, 0.05);
+      }
+
+      .glass-blue {
+        background: #ffffff;
+        border: 1px solid var(--bg-navy);
+        box-shadow: 0 4px 15px rgba(18, 41, 71, 0.05);
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        width: 100%;
+      }
+
+      .section-padding {
+        padding: 70px 0;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 24px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 32px;
+      }
+
+      @media (max-width: 600px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 24px;
+        border-radius: 4px;
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        gap: 8px;
+        border: none;
+      }
+
+      .btn-gold {
+        background: var(--primary-accent);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(207, 162, 64, 0.15);
+      }
+
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(207, 162, 64, 0.3);
+        background: #ba8c32;
+      }
+
+      .btn-blue {
+        background: var(--bg-navy);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(18, 41, 71, 0.15);
+      }
+
+      .btn-blue:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(18, 41, 71, 0.3);
+        background: #0d203a;
+      }
+
+      .btn-teal {
+        background: var(--secondary-accent);
+        color: #ffffff;
+        box-shadow: 0 4px 12px rgba(15, 163, 150, 0.15);
+      }
+
+      .btn-teal:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(15, 163, 150, 0.3);
+        background: #0c8276;
+      }
+
+      .btn-outline {
+        background: transparent;
+        color: var(--bg-navy);
+        border: 1.5px solid var(--bg-navy);
+      }
+
+      .btn-outline:hover {
+        background: rgba(18, 41, 71, 0.03);
+        transform: translateY(-2px);
+      }
+
+      /* Badges */
+      .badge {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 4px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-family: var(--font-sans);
+      }
+
+      .badge-gold {
+        background: rgba(207, 162, 64, 0.1);
+        color: var(--primary-accent);
+        border: 1px solid var(--primary-accent);
+      }
+
+      .badge-blue {
+        background: rgba(18, 41, 71, 0.08);
+        color: var(--bg-navy);
+        border: 1px solid var(--bg-navy);
+      }
+
+      .badge-green {
+        background: rgba(34, 197, 94, 0.1);
+        color: #16a34a;
+        border: 1px solid #16a34a;
+      }
+
+      /* Floating Animation */
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+        100% { transform: translateY(0px); }
+      }
+
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+
+      /* Clean Premium Flat Cards */
+      .card-flat {
+        transition: var(--transition-smooth);
+        border: 1px solid var(--border-light);
+      }
+
+      .card-flat:hover {
+        transform: translateY(-4px);
+        border-color: var(--primary-accent);
+        box-shadow: 0 10px 25px rgba(18, 41, 71, 0.08);
+      }
+
+      /* Header with Logo and aligned Navigation */
+      header.header {
+        position: sticky;
+        top: 0;
+        z-index: 90;
+        background: #ffffff;
+        border-bottom: 1px solid var(--border-light);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+        padding: 10px 0; /* Compact padding to keep logo clean */
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-img {
+        height: 52px;
+        width: auto;
+        border-radius: 4px;
+        display: block;
+      }
+
+      .logo-text {
+        font-family: var(--font-sans);
+        font-size: 1.15rem;
+        font-weight: 800;
+        color: var(--bg-navy);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        text-align: left;
+      }
+
+      .logo-text span {
+        color: var(--primary-accent);
+      }
+
+      /* Perfect Nav links line-alignment */
+      .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 4px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-links li {
+        display: inline-flex;
+        align-items: center;
+      }
+
+      .nav-links a {
+        font-family: var(--font-sans);
+        font-size: 0.82rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        transition: var(--transition-smooth);
+        padding: 0 4px;
+        margin: 0 8px;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        height: 36px;
+        white-space: nowrap;
+      }
+
+      /* Navigation Line Hover Animation */
+      .nav-links a:not(.btn)::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--primary-accent);
+        transition: var(--transition-smooth);
+      }
+
+      .nav-links a:not(.btn):hover::after,
+      .nav-links a:not(.btn).active::after {
+        width: 100%;
+      }
+
+      .nav-links a:not(.btn):hover,
+      .nav-links a:not(.btn).active {
+        color: var(--bg-navy) !important;
+      }
+
+      /* Apply Button Aligned perfectly */
+      .nav-links .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 36px;
+        padding: 0 20px;
+        margin: 0 0 0 10px;
+        border-radius: 4px;
+        line-height: 36px;
+      }
+
+      /* Dropdown Menu styling */
+      .dropdown {
+        position: relative;
+      }
+
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #ffffff;
+        border: 1px solid var(--border-light);
+        border-radius: 4px;
+        list-style: none;
+        min-width: 220px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        display: none;
+        z-index: 100;
+        padding: 6px 0;
+        margin-top: 15px;
+        text-align: left;
+      }
+
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+
+      .dropdown-menu li {
+        width: 100%;
+      }
+
+      .dropdown-menu a {
+        display: block !important;
+        height: auto !important;
+        padding: 10px 16px !important;
+        color: var(--text-secondary) !important;
+        text-transform: none !important;
+        font-family: var(--font-sans) !important;
+        font-size: 0.85rem !important;
+        font-weight: 500 !important;
+        margin: 0 !important;
+        transition: var(--transition-smooth);
+        line-height: 1.2;
+      }
+
+      .dropdown-menu a::after {
+        display: none !important; /* Remove line animation for dropdown childs */
+      }
+
+      .dropdown-menu a:hover {
+        background: rgba(18, 41, 71, 0.04) !important;
+        color: var(--bg-navy) !important;
+        padding-left: 20px;
+      }
+
+      .mobile-menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: var(--bg-navy);
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      @media (max-width: 1140px) {
+        .nav-links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 72px;
+          left: 0;
+          width: 100%;
+          background: #ffffff;
+          border-bottom: 1px solid var(--border-light);
+          padding: 20px;
+          gap: 15px;
+          z-index: 95;
+          box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .nav-links.open {
+          display: flex;
+        }
+        .mobile-menu-btn {
+          display: block;
+        }
+        .dropdown-menu {
+          position: static;
+          display: block;
+          box-shadow: none;
+          border: none;
+          background: var(--bg-secondary);
+          margin-top: 0;
+          padding-left: 10px;
+        }
+        .nav-links .btn {
+          margin: 10px 0 0 0;
+          width: 100%;
+        }
+      }
+
+      @media (min-width: 1141px) and (max-width: 1260px) {
+        .nav-links a {
+          margin: 0 4px;
+          font-size: 0.78rem;
+        }
+        .nav-links .btn {
+          margin-left: 5px;
+          padding: 0 12px;
+        }
+      }
+
+      /* Hero */
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        min-height: 75vh;
+        text-align: left;
+      }
+
+      @media (max-width: 900px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+          padding-top: 40px;
+          padding-bottom: 40px;
+        }
+      }
+
+      .hero-content {
+        flex: 1.2;
+      }
+
+      .hero-title {
+        font-size: 3.2rem;
+        line-height: 1.15;
+        margin-bottom: 20px;
+        color: var(--bg-navy);
+      }
+
+      @media (max-width: 600px) {
+        .hero-title {
+          font-size: 2.3rem;
+        }
+      }
+
+      .hero-description {
+        font-size: 1.05rem;
+        color: var(--text-secondary);
+        margin-bottom: 32px;
+        max-width: 580px;
+      }
+
+      @media (max-width: 900px) {
+        .hero-description {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      .hero-actions {
+        display: flex;
+        gap: 16px;
+      }
+
+      @media (max-width: 900px) {
+        .hero-actions {
+          justify-content: center;
+        }
+      }
+
+      .hero-visual {
+        flex: 0.8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .hero-card {
+        width: 320px;
+        padding: 28px;
+        z-index: 2;
+        text-align: left;
+      }
+
+      /* Timelines */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 40px auto;
+        padding-left: 30px;
+        border-left: 2px dashed var(--border-gold);
+        text-align: left;
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: 35px;
+      }
+
+      .timeline-marker {
+        position: absolute;
+        left: -41px;
+        top: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: var(--primary-accent);
+        border: 4px solid var(--bg-primary);
+        box-shadow: 0 0 10px rgba(207, 162, 64, 0.2);
+      }
+
+      .timeline-marker.blue {
+        background: var(--bg-navy);
+        box-shadow: 0 0 10px rgba(18, 41, 71, 0.2);
+      }
+
+      .timeline-time {
+        font-family: var(--font-tech);
+        color: var(--bg-navy);
+        font-weight: 700;
+        margin-bottom: 6px;
+        font-size: 0.95rem;
+      }
+
+      /* Forms */
+      .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+      }
+
+      .form-label {
+        display: block;
+        font-family: var(--font-sans);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-secondary);
+        margin-bottom: 8px;
+      }
+
+      .form-control {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 4px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-light);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        font-size: 1rem;
+        transition: var(--transition-smooth);
+      }
+
+      .form-control:focus {
+        outline: none;
+        border-color: var(--primary-accent);
+        background: #ffffff;
+        box-shadow: 0 0 10px rgba(207, 162, 64, 0.1);
+      }
+
+      /* Footer (Premium Dark Navy Footer) */
+      .footer {
+        background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+        color: #94a3b8;
+        border-top: 3px solid var(--primary-accent);
+        padding: 70px 0 40px 0;
+        margin-top: auto;
+        position: relative;
+      }
+
+      .footer h1, .footer h2, .footer h3, .footer h4 {
+        color: #ffffff;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 40px;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .footer-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .footer-logo-img {
+        height: 44px;
+        width: auto;
+        border-radius: 4px;
+        display: block;
+      }
+
+      .footer-logo-text {
+        font-family: var(--font-sans);
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #ffffff;
+      }
+
+      .footer-logo-text span {
+        color: var(--primary-accent);
+      }
+
+      .footer-info {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        max-width: 450px;
+        text-align: left;
+      }
+
+      .footer-heading {
+        font-family: var(--font-sans);
+        font-size: 0.95rem;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: #fff;
+        border-left: 3px solid var(--primary-accent);
+        padding-left: 10px;
+        text-align: left;
+      }
+
+      .footer-links {
+        list-style: none;
+        text-align: left;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #94a3b8;
+        transition: var(--transition-smooth);
+        font-size: 0.9rem;
+      }
+
+      .footer-links a:hover {
+        color: var(--primary-accent);
+        padding-left: 4px;
+      }
+
+      .footer-contact {
+        color: #94a3b8;
+        font-size: 0.9rem;
+        text-align: left;
+      }
+
+      .footer-contact p {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 30px;
+        color: #64748b;
+        font-size: 0.85rem;
+      }
+
+      /* Float button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: white;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+        z-index: 80;
+        font-size: 2rem;
+        transition: var(--transition-elastic);
+      }
+
+      .whatsapp-float:hover {
+        transform: scale(1.08) rotate(5deg);
+      }
+
+      /* Stats */
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin: 40px 0;
+      }
+
+      .stat-card {
+        padding: 24px;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: var(--font-tech);
+        font-size: 2.3rem;
+        color: var(--bg-navy);
+        font-weight: bold;
+      }
+
+      /* Welcome Modal Popup */
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(15, 23, 42, 0.6);
+        backdrop-filter: blur(4px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .modal-overlay.show {
+        display: flex;
+        opacity: 1;
+      }
+
+      .modal-card {
+        max-width: 500px;
+        width: 90%;
+        padding: 35px;
+        text-align: center;
+        background: #ffffff;
+        border: 2px solid var(--primary-accent);
+        border-radius: 8px;
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+        transform: translateY(20px);
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .modal-overlay.show .modal-card {
+        transform: translateY(0);
+      }
+
+      /* Quiz */
+      .quiz-card {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 35px;
+      }
+
+      .quiz-option {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-light);
+        border-radius: 6px;
+        color: var(--text-primary);
+        text-align: left;
+        margin-bottom: 12px;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        font-size: 0.95rem;
+        font-weight: 500;
+      }
+
+      .quiz-option:hover {
+        background: rgba(207, 162, 64, 0.05);
+        border-color: var(--primary-accent);
+      }
+
+      /* Dashboard */
+      .dash-grid {
+        display: grid;
+        grid-template-columns: 280px 1fr;
+        gap: 30px;
+        text-align: left;
+      }
+
+      @media (max-width: 800px) {
+        .dash-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .dash-menu {
+        list-style: none;
+      }
+
+      .dash-menu li {
+        padding: 12px 18px;
+        border-radius: 4px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: 1px solid var(--border-light);
+        background: #ffffff;
+      }
+
+      .dash-menu li:hover, .dash-menu li.active {
+        background: rgba(18, 41, 71, 0.05);
+        border-color: var(--bg-navy);
+        color: var(--bg-navy);
+      }
+
+      .progress-bar {
+        height: 6px;
+        background: var(--border-light);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(to right, var(--bg-navy), var(--primary-accent));
+      }
+
+      /* FAQ Accordion Styles */
+      .faq-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .faq-item {
+        border-radius: 8px;
+        transition: var(--transition-smooth);
+        overflow: hidden;
+      }
+
+      .faq-item:hover {
+        border-color: var(--primary-accent);
+        box-shadow: 0 8px 20px rgba(18, 41, 71, 0.04);
+      }
+
+      .faq-question {
+        padding: 20px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 0.98rem;
+        color: var(--bg-navy);
+        background: #ffffff;
+        user-select: none;
+      }
+
+      .faq-icon {
+        font-size: 1.2rem;
+        color: var(--primary-accent);
+        transition: var(--transition-smooth);
+      }
+
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        background: var(--bg-secondary);
+      }
+
+      .faq-answer p {
+        padding: 0 24px 20px 24px;
+        color: var(--text-secondary);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      .faq-item.active .faq-answer {
+        max-height: 220px;
+      }
+
+      .faq-item.active .faq-icon {
+        transform: rotate(45deg);
+        color: var(--secondary-accent);
+      }
+
+      /* Announcement Bar (Patti) Styles */
+      .announcement-bar {
+        background: linear-gradient(90deg, var(--bg-navy) 0%, #1e3a8a 50%, var(--primary-accent) 100%);
+        color: #ffffff;
+        overflow: hidden;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        font-size: 0.82rem;
+        font-weight: 500;
+        letter-spacing: 0.03em;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        position: relative;
+        z-index: 100;
+      }
+
+      .ticker-wrap {
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .ticker-content {
+        display: inline-flex;
+        white-space: nowrap;
+        animation: ticker 25s linear infinite;
+      }
+
+      .ticker-content:hover {
+        animation-play-state: paused;
+      }
+
+      .ticker-content span {
+        padding: 0 40px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .ticker-content strong {
+        color: #fff;
+        font-weight: 800;
+        text-shadow: 0 0 5px rgba(255,255,255,0.2);
+      }
+
+      @keyframes ticker {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(-33.333%, 0, 0);
+        }
+      }
+
+      /* Dark Theme CSS Design System */
+      .dark-theme {
+        --bg-primary: #070e17;          /* Premium pitch dark navy */
+        --bg-secondary: #0d1726;        /* Slate dark navy for cards */
+        --bg-tertiary: #142238;         /* Faint gray navy for active elements/hovers */
+        
+        --bg-navy: #ffffff;             /* Text navy is converted to white */
+        --text-primary: #ffffff;
+        --text-secondary: #cbd5e1;      /* Crisp light gray body text */
+        --text-muted: #8492a6;
+        
+        --border-light: rgba(255, 255, 255, 0.08);
+        --border-blue: rgba(255, 255, 255, 0.15);
+      }
+
+      /* Specific Dark mode overrides for UI elements */
+      .dark-theme h1, 
+      .dark-theme h2, 
+      .dark-theme h3, 
+      .dark-theme h4, 
+      .dark-theme h5, 
+      .dark-theme h6 {
+        color: #ffffff !important;
+      }
+
+      .dark-theme body {
+        background-color: var(--bg-primary);
+        color: var(--text-secondary);
+        background-image: 
+          radial-gradient(circle at 10% 20%, rgba(207, 162, 64, 0.08) 0%, transparent 45%),
+          radial-gradient(circle at 90% 80%, rgba(15, 163, 150, 0.08) 0%, transparent 45%),
+          radial-gradient(rgba(255, 255, 255, 0.06) 1.2px, transparent 1.2px) !important;
+      }
+
+      .dark-theme header.header {
+        background: rgba(7, 14, 23, 0.85) !important;
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border-light) !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+      }
+
+      .dark-theme .logo-text {
+        color: #ffffff !important;
+      }
+
+      .dark-theme .nav-links a {
+        color: var(--text-secondary) !important;
+      }
+
+      .dark-theme .nav-links a:not(.btn):hover,
+      .dark-theme .nav-links a:not(.btn).active {
+        color: var(--primary-accent) !important;
+      }
+
+      .dark-theme .dropdown-menu {
+        background: var(--bg-secondary) !important;
+        border-color: var(--border-light) !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+      }
+
+      .dark-theme .dropdown-menu a {
+        color: var(--text-secondary) !important;
+      }
+
+      .dark-theme .dropdown-menu a:hover {
+        background: var(--bg-tertiary) !important;
+        color: #ffffff !important;
+      }
+
+      .dark-theme .glass {
+        background: var(--bg-secondary) !important;
+        border-color: var(--border-light) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .dark-theme .glass-gold {
+        background: var(--bg-secondary) !important;
+        border-color: var(--primary-accent) !important;
+        box-shadow: 0 4px 20px rgba(207, 162, 64, 0.05) !important;
+      }
+
+      .dark-theme .glass-blue {
+        background: var(--bg-secondary) !important;
+        border-color: rgba(255, 255, 255, 0.15) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .dark-theme .card-flat {
+        border-color: var(--border-light) !important;
+      }
+
+      .dark-theme .card-flat:hover {
+        border-color: var(--primary-accent) !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4) !important;
+      }
+
+      .dark-theme .btn-blue {
+        background: #112641 !important;
+        color: #ffffff !important;
+      }
+
+      .dark-theme .btn-blue:hover {
+        background: #19385f !important;
+      }
+
+      .dark-theme .btn-outline {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+
+      .dark-theme .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.05) !important;
+      }
+
+      .dark-theme .form-control {
+        background: var(--bg-tertiary) !important;
+        border-color: var(--border-light) !important;
+        color: #ffffff !important;
+      }
+
+      .dark-theme .form-control:focus {
+        border-color: var(--primary-accent) !important;
+        background: var(--bg-secondary) !important;
+      }
+
+      /* Stepper Roadmap overrides in Dark theme */
+      .dark-theme .timeline-marker {
+        border-color: var(--bg-secondary) !important;
+      }
+
+      .dark-theme .timeline-time {
+        color: var(--primary-accent) !important;
+      }
+
+      /* Quiz options overrides in Dark theme */
+      .dark-theme .quiz-option {
+        background: var(--bg-tertiary) !important;
+        border-color: var(--border-light) !important;
+        color: #ffffff !important;
+      }
+      
+      .dark-theme .quiz-option:hover {
+        background: var(--bg-secondary) !important;
+        border-color: var(--primary-accent) !important;
+      }
+
+      .dark-theme .modal-card,
+      .dark-theme .dash-menu li,
+      .dark-theme .faq-question {
+        background: var(--bg-secondary) !important;
+        border-color: var(--border-light) !important;
+        color: #ffffff !important;
+      }
+      
+      .dark-theme .dash-menu li:hover,
+      .dark-theme .dash-menu li.active {
+        background: var(--bg-tertiary) !important;
+        border-color: var(--primary-accent) !important;
+        color: var(--primary-accent) !important;
+      }
+
+      /* Mobile nav background overlay in dark theme */
+      @media (max-width: 1140px) {
+        .dark-theme .nav-links {
+          background: var(--bg-secondary) !important;
+          border-bottom-color: var(--border-light) !important;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4) !important;
+        }
+      }
+
+      /* Theme Toggle Button styles */
+      .theme-toggle-btn {
+        background: transparent;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        color: var(--bg-navy);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        transition: var(--transition-smooth);
+        margin-left: 8px;
+      }
+
+      .theme-toggle-btn:hover {
+        background: rgba(18, 41, 71, 0.06);
+      }
+
+      .dark-theme .theme-toggle-btn {
+        color: #ffffff;
+      }
+
+      .dark-theme .theme-toggle-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      /* Premium Preloader Styles */
+      .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #070e17; /* Matches Dark Theme canvas */
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.6s;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .preloader.fade-out {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .preloader-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .preloader-logo {
+        font-family: var(--font-sans);
+        font-size: 2.2rem;
+        font-weight: 900;
+        color: #ffffff;
+        letter-spacing: 0.05em;
+        animation: pulseLogo 2s ease-in-out infinite;
+      }
+
+      .preloader-logo span {
+        color: var(--primary-accent);
+      }
+
+      .preloader-spinner {
+        width: 48px;
+        height: 48px;
+        border: 3px solid rgba(207, 162, 64, 0.1);
+        border-top-color: var(--primary-accent);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 5px;
+      }
+
+      .preloader-bar-wrap {
+        width: 160px;
+        height: 3px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .preloader-bar {
+        width: 0%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+        border-radius: 10px;
+        transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      @keyframes pulseLogo {
+        0%, 100% {
+          transform: scale(0.98);
+          opacity: 0.8;
+          text-shadow: 0 0 10px rgba(207, 162, 64, 0.1);
+        }
+        50% {
+          transform: scale(1.02);
+          opacity: 1;
+          text-shadow: 0 0 25px rgba(207, 162, 64, 0.4);
+        }
+      }
+
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+
+      /* Body content reveal transition */
+      #app-content, .header, .announcement-bar, .whatsapp-float, .footer {
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease;
+      }
+
+      body:not(.loaded) #app-content,
+      body:not(.loaded) .header,
+      body:not(.loaded) .announcement-bar,
+      body:not(.loaded) .whatsapp-float,
+      body:not(.loaded) .footer {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Premium Preloader -->
+    <div class="preloader" id="preloader">
+      <div class="preloader-content">
+        <!-- Pulse Logo Text -->
+        <div class="preloader-logo">
+          <span>GMD</span> ACADEMY
+        </div>
+        <!-- High-tech Progress Spinner / Bar -->
+        <div class="preloader-spinner"></div>
+        <div class="preloader-bar-wrap">
+          <div class="preloader-bar" id="preloader-bar"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Top Announcement Bar (Patti) -->
+    <div class="announcement-bar">
+      <div class="ticker-wrap">
+        <div class="ticker-content">
+          <span>📢 <strong>GMD Special Announcement:</strong> New Batch 1 Class starts on <strong>28 June (Monday)</strong> at <strong>10:15 PM</strong> PKT. Admission Fee Rs. 300 only. Seats are filling fast, register now! 🚀</span>
+          <span>📢 <strong>GMD Special Announcement:</strong> New Batch 1 Class starts on <strong>28 June (Monday)</strong> at <strong>10:15 PM</strong> PKT. Admission Fee Rs. 300 only. Seats are filling fast, register now! 🚀</span>
+          <span>📢 <strong>GMD Special Announcement:</strong> New Batch 1 Class starts on <strong>28 June (Monday)</strong> at <strong>10:15 PM</strong> PKT. Admission Fee Rs. 300 only. Seats are filling fast, register now! 🚀</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div class="modal-overlay" id="welcome-modal">
+      <div class="modal-card">
+        <div class="badge badge-gold" style="margin-bottom: 16px;">Special Announcement</div>
+        <h2 style="font-size: 1.6rem; margin-bottom: 12px; color: var(--bg-navy);">GMD Batch 1 Starts 28 June!</h2>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 24px; line-height: 1.6;">
+          Join the flagship <strong>AI Web Development & Advanced Coding</strong> program. Special fee Rs. 300 only for this batch. Limited seats reserved!
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button class="btn btn-gold" onclick="closeWelcomeModal(true)">Enroll Now (Apply)</button>
+          <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" onclick="closeWelcomeModal(false)">📢 Join WhatsApp Channel</a>
+          <button class="btn btn-outline" onclick="closeWelcomeModal(false)">Browse Website</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header / Nav -->
+    <header class="header">
+      <div class="container nav-container">
+        <!-- Logo image integrated -->
+        <a href="#/" class="logo">
+          <img src="./logo.jpg" alt="Growth Matrix Digital" class="logo-img" onerror="this.style.display='none'">
+          <div class="logo-text"><span>GROWTH MATRIX</span><br>DIGITAL</div>
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu">
+          ☰
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#/" id="nav-home">Home</a></li>
+          <li class="dropdown">
+            <a href="#/courses" id="nav-courses" class="dropdown-trigger">Courses ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="#/course/ai-web-dev">AI Web Development</a></li>
+              <li><a href="#/course/digital-marketing">Digital Marketing</a></li>
+              <li><a href="#/course/shopify-meta">Shopify + Meta Ads</a></li>
+              <li><a href="#/course/ai-course">Artificial Intelligence</a></li>
+            </ul>
+          </li>
+          <li><a href="#/schedule" id="nav-schedule">Schedule</a></li>
+          <li><a href="#/ceo" id="nav-ceo">CEO</a></li>
+          <li><a href="#/mission" id="nav-mission">Mission</a></li>
+          <li><a href="#/dashboard" id="nav-dashboard">Dashboard</a></li>
+          <li><a href="#/quiz" id="nav-quiz">Quiz</a></li>
+          <li><a href="#/contact" id="nav-contact">Contact</a></li>
+          <li><a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" onclick="document.getElementById('nav-links').classList.remove('open');" style="color: var(--secondary-accent) !important; font-weight: 700; display: inline-flex; align-items: center; gap: 4px;">Channel 📢</a></li>
+          <li>
+            <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark mode">🌙</button>
+          </li>
+          <li>
+            <a href="#/admission" class="btn btn-gold" style="color: #ffffff;">Apply</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Dynamic Main Area -->
+    <main id="app-content"></main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo" style="margin-bottom: 20px;">
+              <img src="./logo.jpg" alt="GMD Logo" class="footer-logo-img" onerror="this.style.display='none'">
+              <div class="footer-logo-text"><span>GMD</span> ACADEMY</div>
+            </div>
+            <p class="footer-info" style="line-height: 1.7; margin-bottom: 20px; font-size: 0.9rem;">
+              Growth Matrix Digital (GMD) - Bunyaad: <strong>2026</strong>. Pakistan ke har bache ko advanced digital tech, vibe coding aur e-commerce sikhane aur unhe self-sufficient banane ka azeem maqsad.
+            </p>
+            <!-- Social Media SVG Icons -->
+            <div style="display: flex; gap: 12px; margin-top: 15px;">
+              <a href="https://wa.me/923255224480" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: #25d366;" onmouseover="this.style.background='rgba(37, 211, 102, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </a>
+              <a href="mailto:growthmatrixdigital@gmail.com" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: var(--primary-accent);" onmouseover="this.style.background='rgba(207, 162, 64, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+              </a>
+              <a href="https://github.com/dashboard" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: #ffffff;" onmouseover="this.style.background='rgba(255,255,255,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="footer-heading">Quick Pages</div>
+            <ul class="footer-links" style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px 15px;">
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/courses">Courses</a></li>
+              <li><a href="#/schedule">Schedule</a></li>
+              <li><a href="#/ceo">CEO Biography</a></li>
+              <li><a href="#/mission">Our Mission</a></li>
+              <li><a href="#/reviews">Reviews</a></li>
+              <li><a href="#/syllabus">Syllabus PDF</a></li>
+              <li><a href="#/policies">Rules & Policies</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-heading">Contact Details</div>
+            <div class="footer-contact" style="display: flex; flex-direction: column; gap: 12px;">
+              <p style="margin: 0;"><span style="color: var(--primary-accent);">📍</span> Kot Ishaq, Mor Khunda, Nankana Sahib, Punjab</p>
+              <p style="margin: 0;"><span style="color: var(--primary-accent);">📞</span> Phone 1: 0325 52 24 480</p>
+              <p style="margin: 0;"><span style="color: var(--primary-accent);">📞</span> Phone 2: 0312 68 89 856</p>
+              <p style="margin: 0;"><span style="color: var(--primary-accent);">💬</span> WhatsApp Support: Active 24/7</p>
+              <p style="margin: 0;"><span style="color: var(--primary-accent);">✉️</span> Email: <a href="mailto:growthmatrixdigital@gmail.com" style="color: #cbd5e1; text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-accent)'" onmouseout="this.style.color='#cbd5e1'">growthmatrixdigital@gmail.com</a></p>
+              <div style="margin-top: 5px;">
+                <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" style="font-size: 0.75rem; text-transform: none; padding: 8px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(15, 163, 150, 0.2); color: #ffffff;">
+                  📢 Join Broadcast Channel
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+          <p style="margin: 0;">&copy; <span id="footer-year">2026</span> Growth Matrix Digital Academy (Founded 2026). All Rights Reserved.</p>
+          <p style="margin: 0; font-size: 0.8rem; color: #64748b;">Made with ❤️ for GMD Youth in Pakistan</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a 
+      href="https://wa.me/923255224480" 
+      class="whatsapp-float" 
+      target="_blank" 
+      rel="noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+      </svg>
+    </a>
+
+    <!-- Router Logic and Templates -->
+    <script>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+      // Toast Notifications System (Premium Web Dev Tool)
+      window.showToast = function(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.style.position = 'fixed';
+        toast.style.bottom = '30px';
+        toast.style.left = '30px';
+        toast.style.background = type === 'success' ? 'var(--bg-navy)' : '#ef4444';
+        toast.style.color = '#ffffff';
+        toast.style.padding = '12px 24px';
+        toast.style.borderRadius = '6px';
+        toast.style.boxShadow = '0 10px 25px rgba(0,0,0,0.15)';
+        toast.style.borderLeft = type === 'success' ? '4px solid var(--primary-accent)' : '4px solid #fff';
+        toast.style.zIndex = '10000';
+        toast.style.fontFamily = 'var(--font-sans)';
+        toast.style.fontSize = '0.9rem';
+        toast.style.fontWeight = '600';
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(20px)';
+        toast.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        toast.textContent = message;
+        
+        document.body.appendChild(toast);
+        
+        setTimeout(() => {
+          toast.style.opacity = '1';
+          toast.style.transform = 'translateY(0)';
+        }, 50);
+        
+        setTimeout(() => {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            toast.remove();
+          }, 400);
+        }, 3000);
+      };
+
+      // Count Up Animator for Statistics Card
+      window.animateCounters = function() {
+        const counters = document.querySelectorAll('.count-up');
+        counters.forEach(counter => {
+          const target = +counter.getAttribute('data-target');
+          let count = 0;
+          const speed = target > 1000 ? 40 : 10;
+          const increment = Math.ceil(target / speed);
+          
+          const updateCount = () => {
+            count += increment;
+            if (count < target) {
+              if (target === 100000) {
+                counter.textContent = Math.floor(count / 1000) + ' Lakh';
+              } else {
+                counter.textContent = count;
+              }
+              setTimeout(updateCount, 25);
+            } else {
+              if (target === 100000) {
+                counter.textContent = '1 Lakh';
+              } else {
+                counter.textContent = target;
+              }
+            }
+          };
+          updateCount();
+        });
+      };
+
+      // FAQ Accordion Toggle Controller
+      window.toggleFaq = function(element) {
+        const item = element.parentElement;
+        const allItems = document.querySelectorAll('.faq-item');
+        
+        allItems.forEach(i => {
+          if (i !== item) {
+            i.classList.remove('active');
+            i.querySelector('.faq-answer').style.maxHeight = '0';
+          }
+        });
+
+        item.classList.toggle('active');
+        const answer = item.querySelector('.faq-answer');
+        if (item.classList.contains('active')) {
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        } else {
+          answer.style.maxHeight = '0';
+        }
+      };
+
+      // Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobile-menu-btn');
+      const navLinks = document.getElementById('nav-links');
+      mobileBtn.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+      });
+
+      // Welcome Modal Trigger (Pops up once on every page load/visit)
+      window.addEventListener('load', () => {
+        const modal = document.getElementById('welcome-modal');
+        setTimeout(() => {
+          modal.style.display = 'flex';
+          setTimeout(() => {
+            modal.classList.add('show');
+          }, 50);
+        }, 300);
+      });
+
+      function closeWelcomeModal(enroll) {
+        const modal = document.getElementById('welcome-modal');
+        modal.classList.remove('show');
+        setTimeout(() => {
+          modal.style.display = 'none';
+        }, 400);
+        if (enroll) {
+          window.location.hash = '#/admission';
+        }
+      }
+
+      // Course state variables
+      let activeCourseTab = 'all';
+      let activeDashSubPage = 'overview';
+
+      // 4 Course detailed data
+      const courseDetailsData = {
+        'ai-web-dev': {
+          title: 'AI Web Development & Vibe Coding',
+          tagline: 'Batch 1 flagship program starts June 28. Learn Vibe Coding, WordPress, Google AI Studio tools, GitHub & Earning.',
+          fee: 'Rs. 300 (Only for Batch 1)',
+          timing: '6 Days a week class, 40 to 50 minutes duration',
+          starts: '28 June 2026',
+          badgeColor: 'badge-gold',
+          description: 'Seekhein modern Vibe Coding workflows, LLM prompting (Google AI Studio, Antigravity, Lovable, Codex), localhost WordPress installation, backend integration aur freelancing/earning opportunities.',
+          syllabi: [
+            'Week 1: Vibe Coding fundamentals (Vibe coding kya hai), Types of websites, LLMs & prompting, HTML vs CSS, local WordPress installation on localhost, authentication and deployment basics.',
+            'Week 2: WordPress development details, Customizing Premium Themes, Plugins configuration, and website layout building.',
+            'Week 3: Advanced IDEs & LLM tools (Google AI Studio, Antigravity, Lovable, Codex). Building and remixing full websites using AI tools, and saving code on GitHub.',
+            'Week 4: Backend database setups, User Authentication integration, web deployment, and freelancing/online earning opportunities.'
+          ],
+          features: [
+            'Daily Live Classes (40-50 minutes)',
+            'Full recording archive access',
+            'Seniors & mentors bug fixing support group',
+            'Completion certificate from GMD Academy'
+          ]
+        },
+        'digital-marketing': {
+          title: 'Digital Marketing Specialist',
+          tagline: 'August batch special program. Build business growth strategies, optimize ads, and capture target markets.',
+          fee: 'Rs. 1000',
+          timing: 'Alternate Days, 40 to 50 minutes duration',
+          starts: 'August 2026 (Batch 2)',
+          badgeColor: 'badge-blue',
+          description: 'Businesses aur brands ki growth, search engine algorithms optimization, aur target lead generation ka premium course.',
+          syllabi: [
+            'Week 1: Fundamentals of Marketing, Audience mapping, competitor profiling.',
+            'Week 2: Complete SEO (Keyword targeting, Search Console, Technical audits, backlink profiling).',
+            'Week 3: Social Media Operations (Meta Ads setup, pixel integration, tracking algorithms).',
+            'Week 4: Copywriting formulas, conversion funnels optimization, and marketing analytics.'
+          ],
+          features: [
+            'Alternate Day Live Classes',
+            'LMS recordings repository access',
+            'Active marketing campaigns live evaluation',
+            'Freelancing tips for digital marketers'
+          ]
+        },
+        'shopify-meta': {
+          title: 'Shopify Store + Meta Ads Advanced',
+          tagline: 'August batch special. Create profitable e-commerce stores and scale them using high-performing social ads.',
+          fee: 'Rs. 1000',
+          timing: 'Alternate Days, 40 to 50 minutes duration',
+          starts: 'August 2026 (Batch 2)',
+          badgeColor: 'badge-blue',
+          description: 'E-commerce platform creation aur Meta platform par advanced campaigns chalane ka detailed step-by-step roadmap.',
+          syllabi: [
+            'Week 1: Shopify platform setup, premium layouts design, product hunting, and imports.',
+            'Week 2: Application configuration, secure checkouts, delivery APIs setup.',
+            'Week 3: Meta Business Manager, Custom Audiences building, Pixel optimization.',
+            'Week 4: Budget optimization strategies, ABO/CBO scaling, and tracking margins.'
+          ],
+          features: [
+            'Alternate Day live lectures',
+            'Recording links updated within 12 hours',
+            'Logistics & local sourcing guidance in Pakistan',
+            'Campaign analytics feedback'
+          ]
+        },
+        'ai-course': {
+          title: 'Artificial Intelligence (AI) for Everyone',
+          tagline: 'August batch. Master generative AI tools, automate workflows, and boost productivity by 10x.',
+          fee: 'Rs. 1000',
+          timing: 'Alternate Days, 40 to 50 minutes duration',
+          starts: 'August 2026 (Batch 2)',
+          badgeColor: 'badge-blue',
+          description: 'AI tools ko apni daily life me implement karein aur complex manual tasks ko automations ke zariye second me solve karna seekhein.',
+          syllabi: [
+            'Week 1: Introduction to Generative AI models, Prompt Engineering mechanics.',
+            'Week 2: AI Design & Visuals (Midjourney, Leonardo, generative fill workflows).',
+            'Week 3: Workflows Automation (Creating integrations using Zapier and Make.com).',
+            'Week 4: Video creation with AI models, voice synthesizers, and building custom assistants.'
+          ],
+          features: [
+            'Live practice sessions',
+            'Video tutorials repository',
+            'Free Prompt lists and custom integrations assets',
+            'QA sessions'
+          ]
+        }
+      };
+
+      // Quiz State
+      let quizStep = 1;
+      let quizAnswers = [];
+
+      // Page Template Renderers
+      const templates = {
+        home: () => `
+          <div class="home-page">
+            <!-- Hero Section -->
+            <section class="hero container">
+              <div class="hero-content">
+                <div class="badge badge-gold hero-subtitle">Growth Matrix Digital (Founded 2026)</div>
+                <h1 class="hero-title">Future-Proof Your Career With Modern Skills</h1>
+                <p class="hero-description">
+                  GMD Academy me hum aapko professional programming, marketing, aur AI automations sikhate hain. Hamara maqsad Pakistan ke har bache ko skilled banana hai.
+                </p>
+                <div class="hero-actions">
+                  <a href="#/admission" class="btn btn-gold">
+                    Enroll Now (Apply)
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                  </a>
+                  <a href="#/courses" class="btn btn-outline">
+                    Browse Courses
+                  </a>
+                </div>
+              </div>
+              
+              <div class="hero-visual">
+                <div class="glow-sphere"></div>
+                <div class="hero-card glass glass-gold card-flat animate-float">
+                  <div class="badge badge-gold" style="margin-bottom: 16px;">Batch 1 Enrollment Open</div>
+                  <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--bg-navy);">AI Web Dev & Vibe Coding</h3>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.5;">
+                    Learn vibe coding & WordPress. Classes start <strong>28 June 2026</strong>.
+                  </p>
+                  <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <div>
+                      <span style="font-size: 0.75rem; color: var(--text-muted); display: block; text-transform: uppercase;">Introductory Fee</span>
+                      <span style="font-size: 1.6rem; font-weight: bold; color: var(--primary-accent); font-family: var(--font-tech);">Rs. 300</span>
+                    </div>
+                    <a href="#/course/ai-web-dev" class="btn btn-gold" style="padding: 8px 16px; border-radius: 4px; font-size: 0.8rem;">
+                      Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="section-padding container" style="border-top: 1px solid var(--border-light)">
+              <div class="stats-grid">
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="100000">0</span>+</div>
+                  <div class="stat-label">Youth Mission</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="2026">0</span></div>
+                  <div class="stat-label">Founding Year</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="4">0</span></div>
+                  <div class="stat-label">Advanced Courses</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-label">Seniors Support</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Prominent WhatsApp Channel Alert Banner -->
+            <section class="container" style="margin-bottom: 40px;">
+              <div class="glass glass-gold" style="padding: 24px; text-align: center; border: 2px solid var(--primary-accent);">
+                <span class="badge badge-gold" style="margin-bottom: 12px;">Official Updates</span>
+                <h3 style="color: var(--bg-navy); margin-bottom: 10px;">GMD Ka Official WhatsApp Channel Join Karein</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                  Important announcements, fee structure, batch timings aur free learning materials haasil karne ke liye hamare official channel ko follow karein.
+                </p>
+                <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal">
+                  📢 Join Channel Now
+                </a>
+              </div>
+            </section>
+
+            <!-- Highlights Section -->
+            <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-light)">
+              <div class="container">
+                <div style="text-align: center; margin-bottom: 50px;">
+                  <div class="badge badge-blue" style="margin-bottom: 12px;">Batch Schedule</div>
+                  <h2>GMD Course Structure</h2>
+                  <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto;">
+                    GMD me courses do different batches me split hain. Batch 1 active hai aur Batch 2 August me shuru hoga.
+                  </p>
+                </div>
+
+                <div class="grid-2">
+                  <div class="glass glass-gold card-flat" style="padding: 35px; position: relative;">
+                    <div class="badge badge-gold" style="position: absolute; top: 20px; right: 20px;">Batch 1</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--primary-accent);">Batch 1 (Starts June 28)</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">
+                      Pehla batch jo vibe coding, WordPress local setup, Google AI Studio, GitHub, aur online earning opportunities par based hai.
+                    </p>
+                    <ul class="curriculum-list" style="margin-bottom: 30px;">
+                      <li>AI Web Development & Vibe Coding</li>
+                      <li>Fee: <strong>Rs. 300</strong> (Special Promo)</li>
+                      <li>Classes: <strong>6 Days a week</strong> live sessions</li>
+                      <li>Support: WhatsApp bug fixing group</li>
+                    </ul>
+                    <a href="#/course/ai-web-dev" class="btn btn-gold" style="width: 100%;">
+                      Apply For Batch 1
+                    </a>
+                  </div>
+
+                  <div class="glass glass-blue card-flat" style="padding: 35px; position: relative;">
+                    <div class="badge badge-blue" style="position: absolute; top: 20px; right: 20px;">Batch 2</div>
+                    <h3 style="font-size: 1.4rem; margin-bottom: 15px; color: var(--bg-navy);">Batch 2 (Starts August)</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem;">
+                      August me hum mazeed teen high-demand courses shuru kar rahe hain, jinme classes alternate days par chalengi.
+                    </p>
+                    <ul class="curriculum-list" style="margin-bottom: 30px;">
+                      <li>Digital Marketing Specialist</li>
+                      <li>Shopify Store + Meta Ads</li>
+                      <li>Artificial Intelligence (AI)</li>
+                      <li>Fee: <strong>Rs. 1000</strong> per course</li>
+                    </ul>
+                    <a href="#/courses" class="btn btn-blue" style="width: 100%;">
+                      Browse Batch 2 Courses
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Testimonials Grid Preview -->
+            <section class="section-padding container">
+              <div style="text-align: center; margin-bottom: 45px;">
+                <div class="badge badge-gold" style="margin-bottom: 12px;">Success Stories</div>
+                <h2>Hamare Students Ka Feedback</h2>
+              </div>
+              <div class="grid-3">
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "GMD ki sabse achi baat inki live support hai. Coding me jab bhi issue aata hai support group me seniors help kar dete hain."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Hamza Khan (Lahore)</h4>
+                </div>
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "Rs. 300 me itna detail course mujhe poore Pakistan me kahin nahi mila. Abu Khabib bhai har sawal ka personally jawab dete hain."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Ayesha Siddiqui (Karachi)</h4>
+                </div>
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "Live session ke baad video recordings milne se practice karna bohat aasan ho jata hai. GMD 2026 ka behtareen platform hai."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Bilal Ahmad (Faisalabad)</h4>
+                </div>
+              </div>
+              <div style="text-align: center; margin-top: 35px;">
+                <a href="#/reviews" class="btn btn-outline">Read All Reviews</a>
+              </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light)">
+              <div class="container" style="max-width: 850px;">
+                <div style="text-align: center; margin-bottom: 40px;">
+                  <div class="badge badge-gold" style="margin-bottom: 12px;">Frequently Asked Questions</div>
+                  <h2>Aam Taur Par Poochay Janay Walay Sawalat</h2>
+                </div>
+                
+                <div class="faq-container">
+                  <div class="faq-item glass">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                      <span>1. Classes kis tarah li jayengi?</span>
+                      <span class="faq-icon">＋</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>Classes Zoom App par live li jayengi. Har class 40 se 50 minutes ki hogi. Class ke khatam hone ke baad 12 ghantay ke andar recorded lecture ki backup video bhi aapko portal aur support group me mil jayegi taake revision aasan ho.</p>
+                    </div>
+                  </div>
+
+                  <div class="faq-item glass">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                      <span>2. Fees payment ka kya procedure hai?</span>
+                      <span class="faq-icon">＋</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>Admission Form submit karte hi aap direct CEO Abu Khabib Yaseen ke WhatsApp number par redirect ho jayenge. Wahan aapko EasyPaisa/JazzCash details share ki jayengi. Fee pay karne ke baad screenshot bhejne par aapko portal batch key aur Zoom links mil jayenge.</p>
+                    </div>
+                  </div>
+
+                  <div class="faq-item glass">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                      <span>3. Kya class timings flexible hain?</span>
+                      <span class="faq-icon">＋</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>Batch 1 (AI Web Development) ki regular live class ka time rozana **10:15 PM PKT** hai (Monday to Saturday). Agar aap live class attend nahi kar paate to aap kisi bhi waqt backup recordings portal se stream kar sakte hain.</p>
+                    </div>
+                  </div>
+
+                  <div class="faq-item glass">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                      <span>4. Kya courses ke baad certificate milega?</span>
+                      <span class="faq-icon">＋</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>Ji haan, jab aap apna course aur final project assignment submit kar denge, to Growth Matrix Digital Academy ki taraf se verified completion certificate issue kiya jayega.</p>
+                    </div>
+                  </div>
+
+                  <div class="faq-item glass">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                      <span>5. Kya practice ke dauran help/support milegi?</span>
+                      <span class="faq-icon">＋</span>
+                    </div>
+                    <div class="faq-answer">
+                      <p>GMD ki sabse bari khususiyaat hamari dedicated support hai. Humne code errors aur marketing queries solve karne ke liye active seniors aur mentors ka group banaya hua hai jo 24/7 online guides farahim karte hain.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        `,
+        ceo: () => `
+          <div class="ceo-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">CEO Biography</div>
+              <h1>Abu Khabib Yaseen</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto;">
+                GMD ke founder Abu Khabib Yaseen ki journey, professional history, aur unka azeem mission.
+              </p>
+            </div>
+
+            <div class="grid-2" style="align-items: center; margin-bottom: 60px;">
+              <div>
+                <div class="glass glass-gold card-flat" style="padding: 40px; text-align: center;">
+                  <div style="width: 160px; height: 160px; border-radius: 50%; overflow: hidden; margin: 0 auto 20px auto; border: 3px solid var(--bg-navy); background: #f1f5f9;">
+                    <img src="./khu.jpg" alt="Abu Khabib Yaseen" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%231e3a8a%22/></svg>'">
+                  </div>
+                  <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Abu Khabib Yaseen</h3>
+                  <p class="badge badge-gold" style="margin-bottom: 16px;">CEO & Founder</p>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7;">
+                    "Mera mission ye hai ke aam Pakistani bache jo mehnge digital courses afford nahi kar sakte, unhe highly advanced training di jaye taake wo aage barh sakein."
+                  </p>
+                </div>
+              </div>
+
+              <div>
+                <h2 style="margin-bottom: 20px; font-size: 1.7rem;">Education & Training Path</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                  Maine 2021 me digital field me qadam rakha. Maine mukhtalif platforms se education haasil ki aur expert mentors se seekha:
+                </p>
+
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">2021</div>
+                    <div class="timeline-card glass" style="padding: 16px;">
+                      <h4 style="color: var(--bg-navy); margin-bottom: 6px;">Kamao Free Courses</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Maine digital marketing aur computer coding ki shuruati taleem Kamao (Kamalo) ke free courses se haasil ki.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker blue"></div>
+                    <div class="timeline-time">2022</div>
+                    <div class="timeline-card glass" style="padding: 16px;">
+                      <h4 style="color: var(--bg-navy); margin-bottom: 6px;">NDU & NDA Courses</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Maine <strong>NDU</strong> se Digital Marketing ka details course kiya aur uske bad <strong>NDA</strong> se Web Coding course mukammal kiya.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-time">2023</div>
+                    <div class="timeline-card glass" style="padding: 16px;">
+                      <h4 style="color: var(--bg-navy); margin-bottom: 6px;">Seekh Lo & Indian Mentors</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Maine <strong>Seekh Lo</strong> platform se Mazeed Web Coding seekhi, aur iske sath sath top Indian instructors se Advanced Coding, E-commerce, Facebook Ads aur Meta Ads ke details courses mukammal kiye.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="timeline-item">
+                    <div class="timeline-marker blue"></div>
+                    <div class="timeline-time">2026</div>
+                    <div class="timeline-card glass" style="padding: 16px;">
+                      <h4 style="color: var(--bg-navy); margin-bottom: 6px;">Founding of GMD Academy</h4>
+                      <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                        Maine <strong>2026</strong> me Growth Matrix Digital ki bunyaad rakhi taake in tamam skills ko low cost me aam bacho tak pohanchaya jaye.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <section class="glass" style="padding: 40px; margin-top: 60px; border: 1px solid var(--border-gold);">
+              <h2 style="text-align: center; margin-bottom: 30px;">Personal Address & Verify</h2>
+              <div class="grid-3" style="text-align: center;">
+                <div>
+                  <div style="color: var(--primary-accent); font-size: 1.5rem; margin-bottom: 10px;">📍</div>
+                  <h4 style="margin-bottom: 8px;">Address</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Kot Ishaq Mor Khunda,<br />District Nankana Sahib, Punjab
+                  </p>
+                </div>
+                <div>
+                  <div style="color: var(--primary-accent); font-size: 1.5rem; margin-bottom: 10px;">📞</div>
+                  <h4 style="margin-bottom: 8px;">WhatsApp 1</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    0325 52 24 480<br />(Active Support)
+                  </p>
+                </div>
+                <div>
+                  <div style="color: var(--primary-accent); font-size: 1.5rem; margin-bottom: 10px;">📞</div>
+                  <h4 style="margin-bottom: 8px;">WhatsApp 2</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    0312 68 89 856<br />(Alternate Line)
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+        `,
+        mission: () => `
+          <div class="mission-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Academy Mission</div>
+              <h1>1 Lakh Pakistani Rozgar</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 10px auto 0 auto;">
+                Humara maqsad 100,000 se zayed Pakistani bacho ko self-sufficient aur digital market me kamyab banana hai.
+              </p>
+            </div>
+
+            <div class="grid-2" style="gap: 40px; margin-bottom: 60px; align-items: center;">
+              <div>
+                <h2 style="font-size: 1.7rem; margin-bottom: 20px;">Kyun Shuru Kiya?</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 16px; font-size: 1rem; line-height: 1.7;">
+                  Market me professional tech education bohat zyada mehngi hai. GMD ki bunyaad <strong>2026</strong> me is maqsad ke sath rakhi gayi ke low fees me digital coding aur ads management sikhayi jaye.
+                </p>
+                <p style="color: var(--text-secondary); margin-bottom: 24px; font-size: 1rem; line-height: 1.7;">
+                  CEO Abu Khabib Yaseen chahte hain ke Pakistani youth foreign currency me earn karein aur mulk ki economy me hissa dalein. Humara roadmap clear aur results-oriented hai.
+                </p>
+                <a href="#/admission" class="btn btn-gold">Join the Mission</a>
+              </div>
+
+              <div>
+                <div class="glass glass-gold card-flat" style="padding: 40px;">
+                  <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--bg-navy);">Timeline Target</h3>
+                  <ul class="curriculum-list" style="font-size: 0.95rem;">
+                    <li style="margin-bottom: 15px;">
+                      <strong>Phase 1: Basic Skills</strong><br />
+                      Pehle saal 25,000 students ko programming aur digital concepts deliver karna.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                      <strong>Phase 2: Live Mentoring</strong><br />
+                      Students ko live coding tasks ke zariye bug fixing sikhana.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                      <strong>Phase 3: Earning Portfolios</strong><br />
+                      Seniors support groups ke sath milkar live orders and client projects handles karna.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        courses: () => {
+          const coursesList = [
+            {
+              id: 'ai-web-dev',
+              batch: 'june',
+              title: 'AI Web Development & Vibe Coding',
+              description: 'Seekhein vibe coding fundamentals, WordPress premium setup, Google AI Studio tools, Antigravity, GitHub portfolio aur online earning opportunities.',
+              fee: 'Rs. 300',
+              timing: '6 Days a week, Live + Recorded',
+              duration: '1 Month',
+              starts: '28 June 2026',
+              badgeColor: 'badge-gold',
+              badgeText: 'Batch 1 (Active)'
+            },
+            {
+              id: 'digital-marketing',
+              batch: 'august',
+              title: 'Digital Marketing Specialist',
+              description: 'Seekhein SEO, Content Strategy, Branding aur social media marketing taake kisi bhi business ko online grow kar sakein.',
+              fee: 'Rs. 1000',
+              timing: 'Alternate Days, Live + Recorded',
+              duration: '1 Month',
+              starts: 'August 2026',
+              badgeColor: 'badge-blue',
+              badgeText: 'Batch 2 (Coming Soon)'
+            },
+            {
+              id: 'shopify-meta',
+              batch: 'august',
+              title: 'Shopify Store + Meta Ads Advanced',
+              description: 'E-commerce store design karna aur Facebook/Instagram ads ke zariye high-converting campaigns chalana seekhein.',
+              fee: 'Rs. 1000',
+              timing: 'Alternate Days, Live + Recorded',
+              duration: '1 Month',
+              starts: 'August 2026',
+              badgeColor: 'badge-blue',
+              badgeText: 'Batch 2 (Coming Soon)'
+            },
+            {
+              id: 'ai-course',
+              batch: 'august',
+              title: 'Artificial Intelligence (AI) for Everyone',
+              description: 'Seekhein prompt engineering, generative AI, aur automated workflows jo aapki productivity ko 10x tak barha denge.',
+              fee: 'Rs. 1000',
+              timing: 'Alternate Days, Live + Recorded',
+              duration: '1 Month',
+              starts: 'August 2026',
+              badgeColor: 'badge-blue',
+              badgeText: 'Batch 2 (Coming Soon)'
+            }
+          ];
+
+          const filtered = activeCourseTab === 'all' 
+            ? coursesList 
+            : coursesList.filter(c => c.batch === activeCourseTab);
+
+          return `
+            <div class="courses-page container section-padding">
+              <div style="text-align: center; margin-bottom: 50px;">
+                <div class="badge badge-gold" style="margin-bottom: 12px;">Course Catalog</div>
+                <h1>Hamare Online Courses</h1>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto;">
+                  Growth Matrix Digital ke digital skills program jo practical work aur live tasks par design hain.
+                </p>
+              </div>
+
+              <!-- Tabs -->
+              <div class="tabs-container">
+                <button class="tab-btn ${activeCourseTab === 'all' ? 'active' : ''}" onclick="switchCourseTab('all')">All Courses</button>
+                <button class="tab-btn ${activeCourseTab === 'june' ? 'active' : ''}" onclick="switchCourseTab('june')">June Batch (Rs. 300)</button>
+                <button class="tab-btn ${activeCourseTab === 'august' ? 'active' : ''}" onclick="switchCourseTab('august')">August Batch (Rs. 1000)</button>
+              </div>
+
+              <!-- Courses Grid -->
+              <div class="grid-2">
+                ${filtered.map(course => `
+                  <div class="glass card-flat" style="padding: 30px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <span class="badge ${course.badgeColor}">${course.badgeText}</span>
+                        <span style="font-family: var(--font-tech); font-size: 0.85rem; color: var(--text-secondary);">Starts: ${course.starts}</span>
+                      </div>
+                      <h3 style="font-size: 1.3rem; margin-bottom: 12px; color: var(--bg-navy);">${course.title}</h3>
+                      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 20px; min-height: 60px;">
+                        ${course.description}
+                      </p>
+
+                      <div style="padding: 16px; background: var(--bg-secondary); border-radius: 8px; margin-bottom: 24px; border: 1px solid var(--border-light)">
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;">
+                          <span style="color: var(--text-secondary);">Duration:</span>
+                          <span style="font-weight: bold;">${course.duration}</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 0.9rem;">
+                          <span style="color: var(--text-secondary);">Schedule:</span>
+                          <span style="color: var(--primary-accent); font-weight: 700;">${course.timing}</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem;">
+                          <span style="color: var(--text-secondary);">Class Length:</span>
+                          <span style="font-weight: bold;">40-50 Minutes</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px;">
+                      <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block; text-transform: uppercase;">FEE</span>
+                        <span style="font-size: 1.5rem; font-weight: bold; color: var(--primary-accent); font-family: var(--font-tech);">${course.fee}</span>
+                      </div>
+                      <div style="display: flex; gap: 8px;">
+                        <a href="#/course/${course.id}" class="btn btn-outline" style="padding: 8px 16px; font-size: 0.75rem; border-radius: 4px;">
+                          Syllabus
+                        </a>
+                        <a href="#/admission" class="btn btn-gold" style="padding: 8px 16px; font-size: 0.75rem; border-radius: 4px;">
+                          Apply
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+          `;
+        },
+        courseDetail: (courseId) => {
+          const course = courseDetailsData[courseId] || courseDetailsData['ai-web-dev'];
+          return `
+            <div class="course-detail-page container section-padding">
+              <a href="#/courses" class="btn btn-outline" style="margin-bottom: 30px; padding: 8px 16px; font-size: 0.8rem;">
+                ← Back to Courses
+              </a>
+
+              <div class="grid-2" style="gap: 45px;">
+                <div>
+                  <span class="badge ${course.badgeColor}" style="margin-bottom: 12px;">${course.starts}</span>
+                  <h1 style="font-size: 2rem; margin-bottom: 16px; line-height: 1.25; text-align: left; color: var(--bg-navy);">${course.title}</h1>
+                  <p style="color: var(--primary-accent); font-size: 1.05rem; font-weight: 600; margin-bottom: 24px; text-align: left;">
+                    ${course.tagline}
+                  </p>
+                  <p style="color: var(--text-secondary); margin-bottom: 30px; font-size: 0.98rem; line-height: 1.7; text-align: left;">
+                    ${course.description}
+                  </p>
+
+                  <div style="display: flex; flex-direction: column; gap: 12px; background: var(--bg-secondary); padding: 24px; border-radius: 8px; border: 1px solid var(--border-light);">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 10px;">
+                      <span style="color: var(--text-secondary); font-size: 0.9rem;">Schedule:</span>
+                      <span style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">${course.timing}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border-light); padding-bottom: 10px;">
+                      <span style="color: var(--text-secondary); font-size: 0.9rem;">Duration:</span>
+                      <span style="font-weight: 600; color: var(--text-primary); font-size: 0.9rem;">40 - 50 Minutes</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                      <span style="color: var(--text-secondary); font-size: 0.9rem;">Monthly Fee:</span>
+                      <span style="font-weight: bold; color: var(--primary-accent); font-size: 1.2rem; font-family: var(--font-tech);">${course.fee}</span>
+                    </div>
+                  </div>
+
+                  <div style="margin-top: 30px; display: flex; gap: 16px;">
+                    <a href="#/admission" class="btn btn-gold">Enroll Now</a>
+                    <a href="#/contact" class="btn btn-outline">Ask Questions</a>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="glass glass-gold card-flat" style="padding: 30px; margin-bottom: 30px;">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 24px; color: var(--bg-navy); border-bottom: 2px solid var(--primary-accent); padding-bottom: 10px; display: flex; align-items: center; gap: 8px; justify-content: flex-start;">
+                      📋 Course Syllabus (Weekly Roadmap)
+                    </h3>
+                    <div style="display: flex; flex-direction: column; gap: 20px; position: relative; padding-left: 10px; box-sizing: border-box;">
+                      <!-- Timeline Vertical Line -->
+                      <div style="position: absolute; left: 25px; top: 15px; bottom: 15px; width: 2px; background: linear-gradient(180deg, var(--primary-accent) 0%, var(--bg-navy) 100%); z-index: 1;"></div>
+                      
+                      ${course.syllabi.map((item, idx) => {
+                        const splitIdx = item.indexOf(':');
+                        const weekTitle = splitIdx !== -1 ? item.substring(0, splitIdx) : `Week ${idx + 1}`;
+                        const weekDetails = splitIdx !== -1 ? item.substring(splitIdx + 1) : item;
+                        
+                        return `
+                          <div style="display: flex; gap: 15px; align-items: flex-start; position: relative; z-index: 2;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--bg-navy); border: 2.5px solid var(--primary-accent); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; font-family: var(--font-tech); flex-shrink: 0; box-shadow: 0 4px 10px rgba(18, 41, 71, 0.25); box-sizing: border-box;">
+                              W${idx + 1}
+                            </div>
+                            <div class="glass" style="flex: 1; padding: 16px 20px; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--primary-accent); text-align: left; transition: var(--transition-smooth); box-sizing: border-box;">
+                              <h4 style="font-size: 0.95rem; font-weight: bold; color: var(--bg-navy); margin-bottom: 6px; text-transform: none;">${weekTitle}</h4>
+                              <p style="color: var(--text-secondary); font-size: 0.88rem; line-height: 1.6; margin: 0; text-align: left;">${weekDetails}</p>
+                            </div>
+                          </div>
+                        `;
+                      }).join('')}
+                    </div>
+                  </div>
+
+                  <div class="glass glass-blue card-flat" style="padding: 30px;">
+                    <h3 style="font-size: 1.25rem; margin-bottom: 20px; color: var(--bg-navy); border-bottom: 2px solid var(--bg-navy); padding-bottom: 8px;">Key Deliverables</h3>
+                    <ul class="curriculum-list" style="text-align: left;">
+                      ${course.features.map(item => `
+                        <li style="margin-bottom: 10px; font-size: 0.92rem;">
+                          ${item}
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        },
+        schedule: () => `
+          <div class="schedule-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Timing Slots</div>
+              <h1>Class Timings & Methodology</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto;">
+                Live sessions structure and class hours delivery pattern guide.
+              </p>
+            </div>
+
+            <div class="grid-2">
+              <div class="glass glass-gold card-flat" style="padding: 35px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--bg-navy);">How Classes Run</h3>
+                <ul class="curriculum-list" style="font-size: 0.95rem;">
+                  <li style="margin-bottom: 16px;">
+                    <strong>Live Zoom Sessions:</strong><br />
+                    Daily / alternate day lectures zoom link par live handle hote hain. Duration <strong>40 se 50 minutes</strong>.
+                  </li>
+                  <li style="margin-bottom: 16px;">
+                    <strong>Backup Recordings:</strong><br />
+                    Har live class ki high quality video recording portal/support group par available hoti hai.
+                  </li>
+                  <li style="margin-bottom: 16px;">
+                    <strong>Active Bug Solving Groups:</strong><br />
+                    Practice ke dauran bug/error ke solution ke liye separate WhatsApp groups active rehte hain.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="glass glass-blue card-flat" style="padding: 35px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--bg-navy);">Batch Schedules</h3>
+                
+                <div style="margin-bottom: 25px; border-bottom: 1px dashed var(--border-light); padding-bottom: 15px;">
+                  <span class="badge badge-gold" style="margin-bottom: 10px;">Batch 1 (June 28)</span>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 6px;">AI Web Development & Web Coding</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    Is course ki classes **haftay me 6 din** hongi. Regular daily work for 1 month.
+                  </p>
+                </div>
+
+                <div>
+                  <span class="badge badge-blue" style="margin-bottom: 10px;">Batch 2 (August)</span>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 6px;">Shopify, Digital Marketing, AI</h4>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6;">
+                    August se timing alternate days hogi:<br />
+                    - **Day 1:** Pehle 2 courses ki live session classes.<br />
+                    - **Day 2:** Baqi 2 courses ki classes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        admission: () => `
+          <div class="admission-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Application Form</div>
+              <h1>Register Your Seat</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 15px auto 0 auto;">
+                Details enter karein aur directly WhatsApp par request send karke admission register karein.
+              </p>
+            </div>
+
+            <div class="grid-2" style="align-items: flex-start;">
+              <div class="glass glass-gold" style="padding: 40px;">
+                <h3 style="font-size: 1.25rem; margin-bottom: 25px; border-bottom: 2px solid var(--primary-accent); padding-bottom: 8px;">
+                  Admission Form
+                </h3>
+
+                <form id="admission-form" onsubmit="handleFormSubmit(event)">
+                  <div class="form-group">
+                    <label class="form-label" for="form-name">Full Name</label>
+                    <input type="text" id="form-name" class="form-control" placeholder="Apna naam likhein" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-phone">WhatsApp Number</label>
+                    <input type="tel" id="form-phone" class="form-control" placeholder="E.g. 03251234567" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-city">City (Shehar)</label>
+                    <input type="text" id="form-city" class="form-control" placeholder="E.g. Nankana Sahib" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-course">Course Choose Karein</label>
+                    <select id="form-course" class="form-control">
+                      <option value="ai-web-dev">AI Web Development (June Batch - Rs. 300)</option>
+                      <option value="digital-marketing">Digital Marketing (August Batch - Rs. 1000)</option>
+                      <option value="shopify-meta">Shopify Store + Meta Ads (August Batch - Rs. 1000)</option>
+                      <option value="ai-course">Artificial Intelligence (August Batch - Rs. 1000)</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-trx-id">Transaction ID (Required)</label>
+                    <input type="text" id="form-trx-id" class="form-control" placeholder="E.g. EasyPaisa / JazzCash Trx ID" required />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-receipt">Upload Payment Receipt Screenshot (Required)</label>
+                    <input type="file" id="form-receipt" class="form-control" accept="image/*" required onchange="window.previewReceipt(event)" style="padding: 8px 12px; font-size: 0.9rem;" />
+                    <div id="receipt-preview-container" style="display: none; margin-top: 12px; text-align: center; border: 1px dashed var(--border-light); padding: 12px; border-radius: 6px; background: var(--bg-secondary);">
+                      <p style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 8px; font-weight: 600;">Receipt Preview:</p>
+                      <img id="receipt-preview-img" style="max-height: 150px; max-width: 100%; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); display: inline-block;" />
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="form-message">Extra Message (Optional)</label>
+                    <textarea id="form-message" class="form-control" rows="3" placeholder="Sawal ya query likhein"></textarea>
+                  </div>
+
+                  <button type="submit" id="form-submit-btn" class="btn btn-gold" style="width: 100%; margin-top: 10px;">
+                    Submit Application & Verify Receipt
+                  </button>
+                </form>
+              </div>
+
+              <div>
+                <div class="glass glass-blue" style="padding: 30px; margin-bottom: 30px;">
+                  <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--bg-navy)">Enrollment Steps</h3>
+                  <ul class="curriculum-list" style="font-size: 0.92rem; margin-bottom: 20px;">
+                    <li>Form details submit karte hi WhatsApp chat box redirect ho jayega.</li>
+                    <li>Receipt check hone ke bad aapko zoom batch key aur live support link shift kar diye jayenge.</li>
+                    <li>GMD Academy ki bunyaad <strong>2026</strong> me bacho ke digital development ke liye rakhi gayi hai.</li>
+                  </ul>
+                  <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" style="width: 100%;">
+                    📢 Join Official Channel
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        contact: () => `
+          <div class="contact-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Contact details</div>
+              <h1>Contact Us</h1>
+            </div>
+
+            <div class="grid-2" style="gap: 40px;">
+              <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="glass glass-gold" style="padding: 24px;">
+                  <h3 style="font-size: 1.15rem; margin-bottom: 16px; color: var(--bg-navy);">WhatsApp Chat Support</h3>
+                  <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 12px; border-radius: 6px; border: 1px solid var(--border-light)">
+                      <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">OFFICIAL WHATSAPP 1</span>
+                        <span style="font-weight: bold; font-family: var(--font-tech); color: var(--bg-navy);">0325 52 24 480</span>
+                      </div>
+                      <a href="https://wa.me/923255224480" target="_blank" class="btn btn-gold" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 4px;">Chat</a>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 12px; border-radius: 6px; border: 1px solid var(--border-light)">
+                      <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">OFFICIAL WHATSAPP 2</span>
+                        <span style="font-weight: bold; font-family: var(--font-tech); color: var(--bg-navy);">0312 68 89 856</span>
+                      </div>
+                      <a href="https://wa.me/923126889856" target="_blank" class="btn btn-gold" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 4px;">Chat</a>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 12px; border-radius: 6px; border: 1px solid var(--border-light)">
+                      <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">OFFICIAL CHANNEL</span>
+                        <span style="font-weight: bold; color: var(--bg-navy);">GMD Broadcast Channel</span>
+                      </div>
+                      <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 4px;">Join</a>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); padding: 12px; border-radius: 6px; border: 1px solid var(--border-light)">
+                      <div>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); display: block;">OFFICIAL EMAIL</span>
+                        <span style="font-weight: bold; font-family: var(--font-tech); color: var(--bg-navy); word-break: break-all; font-size: 0.85rem;">growthmatrixdigital@gmail.com</span>
+                      </div>
+                      <a href="mailto:growthmatrixdigital@gmail.com" class="btn btn-gold" style="padding: 6px 14px; font-size: 0.75rem; border-radius: 4px;">Email</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="glass glass-blue" style="padding: 24px;">
+                  <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--bg-navy);">Office Address</h3>
+                  <p style="color: var(--text-secondary); font-size: 0.95rem;">
+                    Kot Ishaq Mor Khunda, District Nankana Sahib, Punjab, Pakistan.
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass glass-blue card-flat" style="padding: 30px; display: flex; flex-direction: column; border: 1.5px solid var(--bg-navy); height: 100%; box-sizing: border-box; text-align: left;">
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+                  <div style="font-size: 1.8rem; line-height: 1;">🗺️</div>
+                  <div>
+                    <h3 style="font-size: 1.25rem; color: var(--bg-navy); margin: 0; text-transform: none;">GMD Location Map</h3>
+                    <p style="font-size: 0.75rem; color: var(--text-muted); margin: 2px 0 0 0;">Zoom & Drag to inspect Nankana Sahib address</p>
+                  </div>
+                </div>
+
+                <!-- Google Maps Frame -->
+                <div style="border: 1px solid var(--border-light); width: 100%; height: 280px; border-radius: 8px; overflow: hidden; background: var(--bg-secondary); position: relative; box-shadow: inset 0 2px 8px rgba(0,0,0,0.05);">
+                  <iframe 
+                    src="https://maps.google.com/maps?q=Kot%20Ishaq,%20Mor%20Khunda,%20Nankana%20Sahib,%20Punjab,%20Pakistan&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="280" 
+                    style="border:0; display: block;" 
+                    allowfullscreen="" 
+                    loading="lazy"
+                  ></iframe>
+                </div>
+
+                <!-- Open in Google Maps button -->
+                <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 8px; width: 100%;">
+                  <a 
+                    href="https://maps.google.com/?q=Kot%20Ishaq,%20Mor%20Khunda,%20Nankana%20Sahib,%20Punjab,%20Pakistan" 
+                    target="_blank" 
+                    class="btn btn-gold" 
+                    style="width: 100%; font-size: 0.8rem; padding: 10px; border-radius: 4px; text-transform: none; display: inline-flex; align-items: center; justify-content: center; gap: 6px; color: #ffffff;"
+                  >
+                    🗺️ Open in Google Maps App
+                  </a>
+                  <span style="font-size: 0.72rem; color: var(--text-muted); text-align: center;">
+                    *Note: Active Zoom features are fully touch-screen compatible.
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        `,
+        dashboard: () => {
+          let subContent = '';
+          if (activeDashSubPage === 'overview') {
+            subContent = `
+              <h4 style="margin-bottom: 16px; color: var(--bg-navy);">Active Course Progress</h4>
+              <div class="glass" style="padding: 20px; margin-bottom: 20px; border: 1px solid var(--border-light)">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <h5 style="font-size: 1rem; color: var(--bg-navy)">AI Web Development & Web Coding</h5>
+                  <span class="badge badge-gold">Batch 1</span>
+                </div>
+                <div style="margin-top: 15px;">
+                  <span style="font-size: 0.85rem; color: var(--text-secondary)">Course Complete: 45%</span>
+                  <div class="progress-bar"><div class="progress-fill" style="width: 45%"></div></div>
+                </div>
+              </div>
+
+              <h4 style="margin-bottom: 16px; color: var(--primary-accent);">Upcoming Live Session</h4>
+              <div class="glass" style="padding: 20px; border: 1px solid var(--border-light)">
+                <p style="font-size: 0.95rem; color: var(--text-primary)">
+                  Next Live Class is scheduled on <strong>28 June 2026</strong>.
+                </p>
+                <div style="display: flex; gap: 15px; margin-top: 15px;">
+                  <span class="badge badge-blue">Time: 40-50 Mins</span>
+                  <span class="badge badge-gold">Trainer: Abu Khabib Yaseen</span>
+                </div>
+              </div>
+            `;
+          } else if (activeDashSubPage === 'lectures') {
+            subContent = `
+              <h4 style="margin-bottom: 16px; color: var(--bg-navy);">Recorded Lecture Playlists</h4>
+              <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div class="glass" style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-light)">
+                  <div>
+                    <span style="font-size: 0.75rem; color: var(--primary-accent); font-weight: 700;">LECTURE 1</span>
+                    <h5 style="margin-top: 2px;">Introduction to HTML5 & Web Layouts</h5>
+                  </div>
+                  <button class="btn btn-gold" style="padding: 6px 12px; font-size: 0.75rem; border-radius: 4px;" onclick="alert('Accessing LMS Archive Recording...')">Play</button>
+                </div>
+                <div class="glass" style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-light)">
+                  <div>
+                    <span style="font-size: 0.75rem; color: var(--primary-accent); font-weight: 700;">LECTURE 2</span>
+                    <h5 style="margin-top: 2px;">CSS Styling and Grid Perspective</h5>
+                  </div>
+                  <button class="btn btn-gold" style="padding: 6px 12px; font-size: 0.75rem; border-radius: 4px;" onclick="alert('Accessing LMS Archive Recording...')">Play</button>
+                </div>
+                <div class="glass" style="padding: 15px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border-light)">
+                  <div>
+                    <span style="font-size: 0.75rem; color: var(--primary-accent); font-weight: 700;">LECTURE 3</span>
+                    <h5 style="margin-top: 2px;">JavaScript DOM Manipulations basics</h5>
+                  </div>
+                  <button class="btn btn-gold" style="padding: 6px 12px; font-size: 0.75rem; border-radius: 4px;" onclick="alert('Accessing LMS Archive Recording...')">Play</button>
+                </div>
+              </div>
+            `;
+          } else if (activeDashSubPage === 'card') {
+            subContent = `
+              <h4 style="margin-bottom: 16px; color: var(--bg-navy)">Generate GMD Student ID Card</h4>
+              <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">
+                Enter name to generate mock Student ID card for Batch 1 (Founded 2026).
+              </p>
+              <div class="form-group" style="max-width: 400px;">
+                <input type="text" id="idcard-name-input" class="form-control" placeholder="Student Name" value="Ali Khan" oninput="updateIDCard(this.value)" />
+              </div>
+
+              <div class="id-card-wrapper" style="max-width: 380px; margin-top: 20px; text-align: left;">
+                <div class="glass glass-blue" style="border: 2px solid var(--bg-navy); border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 10px 30px rgba(18, 41, 71, 0.12); border-color: var(--primary-accent);">
+                  <!-- Gold header strip -->
+                  <div style="background: var(--bg-navy); padding: 12px 18px; border-bottom: 3px solid var(--primary-accent); display: flex; justify-content: space-between; align-items: center;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                      <img src="./logo.jpg" alt="Logo" style="height: 26px; width: auto; border-radius: 2px;" onerror="this.style.display='none'">
+                      <span style="font-size: 0.72rem; font-weight: 800; color: #ffffff; letter-spacing: 0.05em;">GROWTH MATRIX DIGITAL</span>
+                    </div>
+                    <span class="badge badge-gold" style="font-size: 0.55rem; padding: 2px 6px; text-transform: uppercase;">MEMBER</span>
+                  </div>
+
+                  <!-- Card Body -->
+                  <div style="padding: 20px; display: grid; grid-template-columns: 80px 1fr; gap: 15px; align-items: center; position: relative;">
+                    <!-- Smart Card Gold Chip Mockup -->
+                    <div style="position: absolute; right: 20px; top: 15px; width: 32px; height: 26px; background: linear-gradient(135deg, #ffe066 0%, #d4af37 50%, #aa8c1c 100%); border-radius: 4px; border: 1px solid rgba(0,0,0,0.15); box-shadow: inset 0 1px 0 rgba(255,255,255,0.4); display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; padding: 2px; box-sizing: border-box;">
+                      <div style="border-right: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1)"></div>
+                      <div style="border-right: 1px solid rgba(0,0,0,0.1); border-bottom: 1px solid rgba(0,0,0,0.1)"></div>
+                      <div style="border-bottom: 1px solid rgba(0,0,0,0.1)"></div>
+                      <div style="border-right: 1px solid rgba(0,0,0,0.1)"></div>
+                      <div style="border-right: 1px solid rgba(0,0,0,0.1)"></div>
+                      <div></div>
+                    </div>
+
+                    <!-- Photo Box -->
+                    <div style="width: 80px; height: 80px; border-radius: 8px; border: 2px solid var(--primary-accent); overflow: hidden; background: var(--bg-tertiary); display: flex; align-items: center; justify-content: center; font-size: 2.2rem; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                      👤
+                    </div>
+
+                    <!-- Info Box -->
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <h5 id="idcard-name" style="font-size: 1.15rem; color: var(--bg-navy); font-weight: 800; margin: 0; line-height: 1.2;">Ali Khan</h5>
+                      <p style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; font-family: var(--font-tech); margin: 0;">REG ID: GMD-2026-8947</p>
+                      <p style="font-size: 0.75rem; color: var(--text-secondary); margin: 2px 0 0 0;">
+                        Course: <strong style="color: var(--bg-navy);">AI Web Development</strong>
+                      </p>
+                      <p style="font-size: 0.7rem; color: var(--primary-accent); font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; display: flex; align-items: center; gap: 4px; margin: 0;">
+                        ● Batch 1 Student
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Footer / Barcode -->
+                  <div style="background: var(--bg-secondary); padding: 12px 20px; border-top: 1px solid var(--border-light); display: flex; justify-content: space-between; align-items: center;">
+                    <!-- CSS Barcode -->
+                    <div style="display: flex; flex-direction: column; gap: 2px;">
+                      <div style="display: flex; align-items: stretch; height: 20px; width: 120px;">
+                        <div style="width: 2px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 1px; background: #000; margin-right: 2px;"></div>
+                        <div style="width: 3px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 1px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 2px; background: #000; margin-right: 2px;"></div>
+                        <div style="width: 4px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 1px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 3px; background: #000; margin-right: 2px;"></div>
+                        <div style="width: 2px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 1px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 3px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 1px; background: #000; margin-right: 2px;"></div>
+                        <div style="width: 2px; background: #000; margin-right: 1px;"></div>
+                        <div style="width: 4px; background: #000;"></div>
+                      </div>
+                      <span style="font-size: 0.55rem; font-family: monospace; color: var(--text-muted); text-align: center;">*GMD-2026-8947*</span>
+                    </div>
+                    
+                    <div style="text-align: right;">
+                      <span style="font-size: 0.55rem; color: var(--text-muted); display: block; text-transform: uppercase;">Issue Year</span>
+                      <span style="font-size: 0.72rem; font-weight: 800; color: var(--bg-navy);">2026</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
+          }
+
+          return `
+            <div class="dashboard-page container section-padding">
+              <div style="text-align: center; margin-bottom: 40px;">
+                <div class="badge badge-blue" style="margin-bottom: 12px;">Student Panel</div>
+                <h1>Mock Student Dashboard</h1>
+              </div>
+
+              <div class="dash-grid">
+                <div>
+                  <ul class="dash-menu">
+                    <li class="${activeDashSubPage === 'overview' ? 'active' : ''}" onclick="switchDashTab('overview')">Overview</li>
+                    <li class="${activeDashSubPage === 'lectures' ? 'active' : ''}" onclick="switchDashTab('lectures')">Lectures archive</li>
+                    <li class="${activeDashSubPage === 'card' ? 'active' : ''}" onclick="switchDashTab('card')">Student ID Card</li>
+                  </ul>
+                </div>
+                <div>
+                  ${subContent}
+                </div>
+              </div>
+            </div>
+          `;
+        },
+        reviews: () => `
+          <div class="reviews-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Reviews</div>
+              <h1>Success Stories</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 10px auto 0 auto;">
+                Read what our students say about Growth Matrix Digital (Founded 2026).
+              </p>
+            </div>
+
+            <div class="grid-3" style="margin-bottom: 40px;">
+              <div class="glass card-flat" style="padding: 24px;">
+                <div style="color: var(--primary-accent);">★★★★★</div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                  "Maine AI Web Development course join kiya tha. Class timings (40-50 min) bilkul perfect hain aur recordings se revision boht easy ho jati hai."
+                </p>
+                <h5 style="margin-top: 16px; color: var(--bg-navy);">- Nabeel Malik (Rawalpindi)</h5>
+              </div>
+
+              <div class="glass card-flat" style="padding: 24px;">
+                <div style="color: var(--primary-accent);">★★★★★</div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                  "Shopify store setup aur custom Meta Ads targeting seekhne ke baad maine local dropshipping start ki. GMD is outstanding platform in Pakistan."
+                </p>
+                <h5 style="margin-top: 16px; color: var(--bg-navy);">- Zainab Fatima (Sargodha)</h5>
+              </div>
+
+              <div class="glass card-flat" style="padding: 24px;">
+                <div style="color: var(--primary-accent);">★★★★★</div>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                  "GMD team ka response support group me boht fast hai. Fee (Rs. 300) to na hone ke barabar hai. Highly recommended!"
+                </p>
+                <h5 style="margin-top: 16px; color: var(--bg-navy);">- Haris Jameel (Multan)</h5>
+              </div>
+            </div>
+          </div>
+        `,
+        syllabus: () => `
+          <div class="syllabus-page container section-padding">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Course Syllabi</div>
+              <h1>Download Detailed Course PDF</h1>
+              <p style="color: var(--text-secondary); max-width: 600px; margin: 10px auto 0 auto;">
+                Syllabi guidelines check karein aur details download file request send karein.
+              </p>
+            </div>
+
+            <div class="grid-2">
+              <div class="glass card-flat" style="padding: 25px;">
+                <h3 style="font-size: 1.2rem; color: var(--bg-navy); margin-bottom: 10px;">AI Web Development Syllabus</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px;">
+                  Includes HTML5, CSS Grid, Advanced JavaScript and AI integrations.
+                </p>
+                <a href="https://wa.me/923255224480?text=I%20want%20AI%20Web%20Dev%20Syllabus%20PDF" target="_blank" class="btn btn-gold" style="font-size: 0.75rem; padding: 8px 16px; border-radius: 4px;">Get PDF via WhatsApp</a>
+              </div>
+
+              <div class="glass card-flat" style="padding: 25px;">
+                <h3 style="font-size: 1.2rem; color: var(--bg-navy); margin-bottom: 10px;">Shopify + Meta Ads Syllabus</h3>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px;">
+                  Includes Store configurations, Pixel setup and conversion scaling strategies.
+                </p>
+                <a href="https://wa.me/923255224480?text=I%20want%20Shopify%20Meta%20Syllabus%20PDF" target="_blank" class="btn btn-blue" style="font-size: 0.75rem; padding: 8px 16px; border-radius: 4px;">Get PDF via WhatsApp</a>
+              </div>
+            </div>
+          </div>
+        `,
+        quiz: () => {
+          let stepContent = '';
+          if (quizStep === 1) {
+            stepContent = `
+              <h4 style="margin-bottom: 20px; font-size: 1.15rem; color: var(--bg-navy)">Question 1: Aap ka interest kis field me sabse zyada hai?</h4>
+              <button class="quiz-option" onclick="handleQuizAnswer('coding')">A. Web Coding & Building Sites (Coding/Programming)</button>
+              <button class="quiz-option" onclick="handleQuizAnswer('marketing')">B. Sales, Ads, and Branding (Marketing/E-commerce)</button>
+              <button class="quiz-option" onclick="handleQuizAnswer('ai')">C. AI Automation & Prompts engineering (Tech innovation)</button>
+            `;
+          } else if (quizStep === 2) {
+            stepContent = `
+              <h4 style="margin-bottom: 20px; font-size: 1.15rem; color: var(--bg-navy)">Question 2: Aap class study ke liye daily kitna waqt nikal sakte hain?</h4>
+              <button class="quiz-option" onclick="handleQuizAnswer('daily')">A. Daily 1 Hour (Regular work schedule)</button>
+              <button class="quiz-option" onclick="handleQuizAnswer('alternate')">B. Alternate Days (Flexible work schedule)</button>
+            `;
+          } else if (quizStep === 3) {
+            stepContent = `
+              <h4 style="margin-bottom: 20px; font-size: 1.15rem; color: var(--bg-navy)">Question 3: Aap ka background computer technology me kya hai?</h4>
+              <button class="quiz-option" onclick="handleQuizAnswer('beginner')">A. Absolute Beginner (Zero coding knowledge)</button>
+              <button class="quiz-option" onclick="handleQuizAnswer('basic')">B. Basic knowledge (Know simple commands)</button>
+            `;
+          } else if (quizStep === 4) {
+            // Recommendation logic
+            let recommendedCourse = '';
+            let detailsPath = '';
+            const interest = quizAnswers[0];
+
+            if (interest === 'coding') {
+              recommendedCourse = 'AI Web Development & Advanced Web Coding';
+              detailsPath = '#/course/ai-web-dev';
+            } else if (interest === 'marketing') {
+              recommendedCourse = 'Shopify Store + Meta Ads Advanced';
+              detailsPath = '#/course/shopify-meta';
+            } else {
+              recommendedCourse = 'Artificial Intelligence (AI) for Everyone';
+              detailsPath = '#/course/ai-course';
+            }
+
+            stepContent = `
+              <div style="text-align: center; padding: 10px 0;">
+                <div style="font-size: 3rem; color: var(--primary-accent); margin-bottom: 12px;">🎯</div>
+                <h4 style="font-size: 1.25rem; margin-bottom: 10px; color: var(--bg-navy)">Recommended Course:</h4>
+                <h3 style="font-size: 1.4rem; color: var(--bg-navy); margin-bottom: 20px;">${recommendedCourse}</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 24px;">
+                  Aap ke answers ke mutabik ye course aapke liye sabse behtar rahega taake aap online earning start kar sakein.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 15px;">
+                  <a href="${detailsPath}" class="btn btn-gold">Course Details</a>
+                  <button class="btn btn-outline" onclick="resetQuiz()">Retake Quiz</button>
+                </div>
+              </div>
+            `;
+          }
+
+          return `
+            <div class="quiz-page container section-padding">
+              <div style="text-align: center; margin-bottom: 40px;">
+                <div class="badge badge-gold" style="margin-bottom: 12px;">Interactive Helper</div>
+                <h1>Choose Your Career Path</h1>
+              </div>
+
+              <div class="glass quiz-card">
+                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; font-family: var(--font-tech)">
+                  <span>STEP ${quizStep > 4 ? 4 : quizStep} OF 3</span>
+                  <span>${quizStep === 4 ? 'COMPLETED' : 'IN PROGRESS'}</span>
+                </div>
+                ${stepContent}
+              </div>
+            </div>
+          `;
+        },
+        policies: () => `
+          <div class="policies-page container section-padding" style="text-align: left; max-width: 800px;">
+            <div style="text-align: center; margin-bottom: 50px;">
+              <div class="badge badge-gold" style="margin-bottom: 12px;">Rules</div>
+              <h1>Student Policies & Rules</h1>
+              <p style="color: var(--text-secondary); font-size: 0.92rem;">
+                Growth Matrix Digital Academy (Founded 2026) guidelines.
+              </p>
+            </div>
+
+            <div class="glass" style="padding: 35px; display: flex; flex-direction: column; gap: 24px; border: 1px solid var(--border-light)">
+              <div>
+                <h4 style="color: var(--bg-navy); margin-bottom: 8px;">1. Class Attendance & Decorum</h4>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                  Students ko regular live classes attend karni chahiye. Har live class 40 se 50 minutes ki hoti hai. Decorum kharab karne par block list me dala ja sakta hai.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="color: var(--bg-navy); margin-bottom: 8px;">2. Support Groups Behavior</h4>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                  Dedicated seniors support group me faqat coding/marketing tasks se mutalik questions allowed hain. Spams strictly prohibited hain.
+                </p>
+              </div>
+
+              <div>
+                <h4 style="color: var(--bg-navy); margin-bottom: 8px;">3. Low Fee Policy</h4>
+                <p style="color: var(--text-secondary); font-size: 0.92rem; line-height: 1.6;">
+                  GMD ki fees market ke mukable me Rs. 300 aur Rs. 1000 intehai kam hain taake Pakistani youth self-reliance training haasil kar sake. Is fee structure me changes updates schedules par shamil hongi.
+                </p>
+              </div>
+            </div>
+          </div>
+        `
+      };
+
+      // Client Router engine
+      function renderPage() {
+        const hash = window.location.hash || '#/';
+        const contentDiv = document.getElementById('app-content');
+        
+        // Remove active state from all links
+        document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+
+        // Close mobile drawer
+        document.getElementById('nav-links').classList.remove('open');
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+
+        if (hash === '#/' || hash === '') {
+          contentDiv.innerHTML = templates.home();
+          document.getElementById('nav-home').classList.add('active');
+          setTimeout(window.animateCounters, 100);
+        } else if (hash === '#/ceo') {
+          contentDiv.innerHTML = templates.ceo();
+          document.getElementById('nav-ceo').classList.add('active');
+        } else if (hash === '#/mission') {
+          contentDiv.innerHTML = templates.mission();
+          document.getElementById('nav-mission').classList.add('active');
+        } else if (hash === '#/courses') {
+          contentDiv.innerHTML = templates.courses();
+          document.getElementById('nav-courses').classList.add('active');
+        } else if (hash.startsWith('#/course/')) {
+          const courseId = hash.replace('#/course/', '');
+          contentDiv.innerHTML = templates.courseDetail(courseId);
+          document.getElementById('nav-courses').classList.add('active');
+        } else if (hash === '#/schedule') {
+          contentDiv.innerHTML = templates.schedule();
+          document.getElementById('nav-schedule').classList.add('active');
+        } else if (hash === '#/admission') {
+          contentDiv.innerHTML = templates.admission();
+        } else if (hash === '#/contact') {
+          contentDiv.innerHTML = templates.contact();
+          document.getElementById('nav-contact').classList.add('active');
+        } else if (hash === '#/dashboard') {
+          contentDiv.innerHTML = templates.dashboard();
+          document.getElementById('nav-dashboard').classList.add('active');
+        } else if (hash === '#/reviews') {
+          contentDiv.innerHTML = templates.reviews();
+        } else if (hash === '#/syllabus') {
+          contentDiv.innerHTML = templates.syllabus();
+        } else if (hash === '#/quiz') {
+          contentDiv.innerHTML = templates.quiz();
+          document.getElementById('nav-quiz').classList.add('active');
+        } else if (hash === '#/policies') {
+          contentDiv.innerHTML = templates.policies();
+        } else {
+          // Fallback
+          contentDiv.innerHTML = templates.home();
+          document.getElementById('nav-home').classList.add('active');
+        }
+      }
+
+      // Tab switcher helper on Courses page
+      window.switchCourseTab = function(tabName) {
+        activeCourseTab = tabName;
+        renderPage();
+      };
+
+      // Dashboard tab switch helper
+      window.switchDashTab = function(tabName) {
+        activeDashSubPage = tabName;
+        renderPage();
+      };
+
+      // Dynamic ID Card name sync
+      window.updateIDCard = function(val) {
+        document.getElementById('idcard-name').textContent = val || 'Ali Khan';
+      };
+
+      // Quiz Answer controller
+      window.handleQuizAnswer = function(answer) {
+        quizAnswers.push(answer);
+        quizStep++;
+        renderPage();
+      };
+
+      window.resetQuiz = function() {
+        quizStep = 1;
+        quizAnswers = [];
+        renderPage();
+      };
+
+      // Receipt Preview Handler
+      window.previewReceipt = function(event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById('receipt-preview-container');
+        const previewImg = document.getElementById('receipt-preview-img');
+        if (!file || !previewContainer || !previewImg) return;
+
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          previewImg.src = e.target.result;
+          previewContainer.style.display = 'block';
+        };
+        reader.readAsDataURL(file);
+      };
+
+      // Form submit handler
+      window.handleFormSubmit = function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('form-name').value;
+        const phone = document.getElementById('form-phone').value;
+        const city = document.getElementById('form-city').value;
+        const courseVal = document.getElementById('form-course').value;
+        const trxId = document.getElementById('form-trx-id').value;
+        const receiptInput = document.getElementById('form-receipt');
+        const message = document.getElementById('form-message').value;
+        const submitBtn = document.getElementById('form-submit-btn');
+
+        if (!name || !phone || !city || !trxId || !receiptInput.files[0]) {
+          window.showToast('Meharbani karke saari details aur receipt upload karein.', 'error');
+          return;
+        }
+
+        // Show loading status on button
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = 'Uploading Receipt... Please Wait ⏳';
+        submitBtn.disabled = true;
+        window.showToast('Uploading receipt screenshot...', 'info');
+
+        // Prepare upload payload to tmpfiles.org
+        const file = receiptInput.files[0];
+        const formData = new FormData();
+        formData.append('file', file);
+
+        // Define function to generate and redirect
+        const proceedRedirect = (receiptLink) => {
+          const courseLabels = {
+            'ai-web-dev': 'AI Web Development (June Batch - Rs. 300)',
+            'digital-marketing': 'Digital Marketing (August Batch - Rs. 1000)',
+            'shopify-meta': 'Shopify Store + Meta Ads (August Batch - Rs. 1000)',
+            'ai-course': 'Artificial Intelligence (August Batch - Rs. 1000)'
+          };
+
+          const text = `Assalamu Alaikum Abu Khabib Yaseen,
+Mera naam: *${name}*
+WhatsApp number: *${phone}*
+City: *${city}*
+Course: *${courseLabels[courseVal]}*
+Transaction ID: *${trxId}*
+Receipt Screenshot URL: ${receiptLink}
+Message: ${message || 'None'}`;
+
+          const encodedText = encodeURIComponent(text);
+          const primaryNumber = '923255224480'; // 0325 52 24 480
+          const whatsappUrl = `https://wa.me/${primaryNumber}?text=${encodedText}`;
+
+          // Reset button
+          submitBtn.innerHTML = originalBtnText;
+          submitBtn.disabled = false;
+
+          // Redirect to WhatsApp
+          window.open(whatsappUrl, '_blank');
+          window.showToast('Opening WhatsApp chat...', 'success');
+
+          // Show success status
+          const formContainer = document.getElementById('admission-form').parentElement;
+          formContainer.innerHTML = `
+            <div style="text-align: center; padding: 20px 0;">
+              <div style="font-size: 3rem; color: var(--primary-accent); margin-bottom: 16px;">✓</div>
+              <h4 style="font-size: 1.2rem; margin-bottom: 10px; color: var(--bg-navy)">Application Submitted!</h4>
+              <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 20px; line-height: 1.6; max-width: 450px; margin-left: auto; margin-right: auto;">
+                Aapka admission form aur transaction details WhatsApp ke liye tayyar hain. Agar WhatsApp window open nahi hui to niche button dabakar proceed karein.<br>
+                <strong>Zaroori Note:</strong> Meharbani karke chat open hone par wahan apni uploaded screenshot receipt picture bhi attach kar ke send kar dein.
+              </p>
+              <button class="btn btn-gold" onclick="window.open('${whatsappUrl}', '_blank')" style="margin-bottom: 10px;">
+                Re-open WhatsApp Chat
+              </button>
+            </div>
+          `;
+        };
+
+        // Upload receipt file using Fetch
+        fetch('https://tmpfiles.org/api/v1/upload', {
+          method: 'POST',
+          body: formData
+        })
+        .then(response => {
+          if (!response.ok) throw new Error('Upload server error');
+          return response.json();
+        })
+        .then(resData => {
+          if (resData.status === 'success' && resData.data && resData.data.url) {
+            // Replace tmpfiles.org/XXXX/file with tmpfiles.org/dl/XXXX/file for direct link
+            const directUrl = resData.data.url.replace('https://tmpfiles.org/', 'https://tmpfiles.org/dl/');
+            proceedRedirect(directUrl);
+          } else {
+            throw new Error('Upload failed');
+          }
+        })
+        .catch(err => {
+          console.error(err);
+          window.showToast('Receipt upload failed! Proceeding with offline manual attachment...', 'warning');
+          // Fallback to offline manual attachment note
+          proceedRedirect('[Picture attached manually in WhatsApp chat]');
+        });
+      };
+
+      // Theme Toggle Logic
+      function initTheme() {
+        const toggleBtn = document.getElementById('theme-toggle-btn');
+        if (!toggleBtn) return;
+        
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') {
+          document.documentElement.classList.add('dark-theme');
+          toggleBtn.textContent = '☀️';
+        } else {
+          document.documentElement.classList.remove('dark-theme');
+          toggleBtn.textContent = '🌙';
+        }
+        
+        toggleBtn.addEventListener('click', () => {
+          if (document.documentElement.classList.contains('dark-theme')) {
+            document.documentElement.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            toggleBtn.textContent = '🌙';
+          } else {
+            document.documentElement.classList.add('dark-theme');
+            localStorage.setItem('theme', 'dark');
+            toggleBtn.textContent = '☀️';
+          }
+        });
+      }
+      initTheme();
+
+      // Preloader Controller
+      function initPreloader() {
+        const preloader = document.getElementById('preloader');
+        const progressBar = document.getElementById('preloader-bar');
+        if (!preloader || !progressBar) return;
+
+        // Step 1: Start filling the progress bar
+        setTimeout(() => {
+          progressBar.style.width = '100%';
+        }, 100);
+
+        // Fallback in case window load event already fired or takes too long
+        const fallbackTimeout = setTimeout(() => {
+          preloader.classList.add('fade-out');
+          document.body.classList.add('loaded');
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 600);
+        }, 3000);
+
+        // Step 2: Fade out preloader and reveal content after bar finishes (1.2s transition)
+        window.addEventListener('load', () => {
+          clearTimeout(fallbackTimeout);
+          setTimeout(() => {
+            preloader.classList.add('fade-out');
+            document.body.classList.add('loaded');
+            
+            // Clean up preloader element from layout click calculations
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 600);
+          }, 1300); // Gives time to see the beautiful loading progress
+        });
+      }
+      initPreloader();
+
+      // Watch for Hash Changes
+      window.addEventListener('hashchange', renderPage);
+
+      // Initial Render
+      window.addEventListener('load', renderPage);
+    </script>
+  </body>
+</html>
