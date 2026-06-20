@@ -25,16 +25,16 @@
         --bg-secondary: #f8fafc;
         --bg-tertiary: #f1f5f9;
         
-        --bg-navy: #0F1E36;           /* Exact Deep Navy from Logo */
-        --primary-accent: #F59E0B;     /* Exact Gold from Logo */
-        --secondary-accent: #14B8A6;   /* Exact Teal from Logo arrow */
+        --bg-navy: #122947;           /* Exact Deep Navy from Logo */
+        --primary-accent: #cfa240;     /* Exact Gold from Logo */
+        --secondary-accent: #0fa396;   /* Exact Teal from Logo arrow */
         
-        --text-primary: #0F1E36;       /* Dark Navy for headings */
+        --text-primary: #122947;       /* Dark Navy for headings */
         --text-secondary: #334155;     /* Slate for body text */
         --text-muted: #64748b;
         
-        --border-gold: rgba(245, 158, 11, 0.3);
-        --border-blue: rgba(15, 30, 54, 0.25);
+        --border-gold: rgba(207, 162, 64, 0.3);
+        --border-blue: rgba(18, 41, 71, 0.25);
         --border-light: #e2e8f0;
 
         --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
@@ -58,9 +58,9 @@
         overflow-x: hidden;
         position: relative;
         background-image: 
-          radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.03) 0%, transparent 45%),
-          radial-gradient(circle at 90% 80%, rgba(15, 30, 54, 0.03) 0%, transparent 45%),
-          radial-gradient(rgba(15, 30, 54, 0.06) 1.2px, transparent 1.2px);
+          radial-gradient(circle at 10% 20%, rgba(207, 162, 64, 0.03) 0%, transparent 45%),
+          radial-gradient(circle at 90% 80%, rgba(18, 41, 71, 0.03) 0%, transparent 45%),
+          radial-gradient(rgba(18, 41, 71, 0.06) 1.2px, transparent 1.2px);
         background-size: 100% 100%, 100% 100%, 24px 24px;
         min-height: 100vh;
         display: flex;
@@ -105,13 +105,13 @@
       .glass-gold {
         background: #ffffff;
         border: 1px solid var(--primary-accent);
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.05);
+        box-shadow: 0 4px 15px rgba(207, 162, 64, 0.05);
       }
 
       .glass-blue {
         background: #ffffff;
         border: 1px solid var(--bg-navy);
-        box-shadow: 0 4px 15px rgba(15, 30, 54, 0.05);
+        box-shadow: 0 4px 15px rgba(18, 41, 71, 0.05);
       }
 
       .container {
@@ -164,37 +164,37 @@
       .btn-gold {
         background: var(--primary-accent);
         color: #ffffff;
-        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+        box-shadow: 0 4px 12px rgba(207, 162, 64, 0.15);
       }
 
       .btn-gold:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(245, 158, 11, 0.3);
-        background: #D97706;
+        box-shadow: 0 6px 20px rgba(207, 162, 64, 0.3);
+        background: #ba8c32;
       }
 
       .btn-blue {
         background: var(--bg-navy);
         color: #ffffff;
-        box-shadow: 0 4px 12px rgba(15, 30, 54, 0.15);
+        box-shadow: 0 4px 12px rgba(18, 41, 71, 0.15);
       }
 
       .btn-blue:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(15, 30, 54, 0.3);
-        background: #08101E;
+        box-shadow: 0 6px 20px rgba(18, 41, 71, 0.3);
+        background: #0d203a;
       }
 
       .btn-teal {
         background: var(--secondary-accent);
         color: #ffffff;
-        box-shadow: 0 4px 12px rgba(20, 184, 166, 0.15);
+        box-shadow: 0 4px 12px rgba(15, 163, 150, 0.15);
       }
 
       .btn-teal:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(20, 184, 166, 0.3);
-        background: #0D9488;
+        box-shadow: 0 6px 20px rgba(15, 163, 150, 0.3);
+        background: #0c8276;
       }
 
       .btn-outline {
@@ -204,7 +204,7 @@
       }
 
       .btn-outline:hover {
-        background: rgba(15, 30, 54, 0.03);
+        background: rgba(18, 41, 71, 0.03);
         transform: translateY(-2px);
       }
 
@@ -221,13 +221,13 @@
       }
 
       .badge-gold {
-        background: rgba(245, 158, 11, 0.1);
+        background: rgba(207, 162, 64, 0.1);
         color: var(--primary-accent);
         border: 1px solid var(--primary-accent);
       }
 
       .badge-blue {
-        background: rgba(15, 30, 54, 0.08);
+        background: rgba(18, 41, 71, 0.08);
         color: var(--bg-navy);
         border: 1px solid var(--bg-navy);
       }
@@ -258,7 +258,7 @@
       .card-flat:hover {
         transform: translateY(-4px);
         border-color: var(--primary-accent);
-        box-shadow: 0 10px 25px rgba(15, 30, 54, 0.08);
+        box-shadow: 0 10px 25px rgba(18, 41, 71, 0.08);
       }
 
       /* Header with Logo and aligned Navigation */
@@ -419,7 +419,7 @@
       }
 
       .dropdown-menu a:hover {
-        background: rgba(15, 30, 54, 0.04) !important;
+        background: rgba(18, 41, 71, 0.04) !important;
         color: var(--bg-navy) !important;
         padding-left: 20px;
       }
@@ -500,7 +500,7 @@
         }
 
         .dark-theme .nav-links {
-          background: rgba(10, 15, 29, 0.98) !important;
+          background: rgba(7, 14, 23, 0.98) !important;
           border-left-color: rgba(255, 255, 255, 0.08) !important;
           box-shadow: -10px 0 35px rgba(0,0,0,0.4) !important;
         }
@@ -542,7 +542,7 @@
         }
 
         .nav-links a:hover, .nav-links a.active {
-          background: rgba(15, 30, 54, 0.04) !important;
+          background: rgba(18, 41, 71, 0.04) !important;
           color: var(--primary-accent) !important;
           padding-left: 20px !important;
         }
@@ -716,12 +716,12 @@
         border-radius: 50%;
         background: var(--primary-accent);
         border: 4px solid var(--bg-primary);
-        box-shadow: 0 0 10px rgba(245, 158, 11, 0.2);
+        box-shadow: 0 0 10px rgba(207, 162, 64, 0.2);
       }
 
       .timeline-marker.blue {
         background: var(--bg-navy);
-        box-shadow: 0 0 10px rgba(15, 30, 54, 0.2);
+        box-shadow: 0 0 10px rgba(18, 41, 71, 0.2);
       }
 
       .timeline-time {
@@ -764,12 +764,12 @@
         outline: none;
         border-color: var(--primary-accent);
         background: #ffffff;
-        box-shadow: 0 0 10px rgba(245, 158, 11, 0.1);
+        box-shadow: 0 0 10px rgba(207, 162, 64, 0.1);
       }
 
       /* Footer (Premium Dark Navy Footer) */
       .footer {
-        background: linear-gradient(180deg, #0F1E36 0%, #0A0F1D 100%);
+        background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
         color: #94a3b8;
         border-top: 3px solid var(--primary-accent);
         padding: 70px 0 40px 0;
@@ -956,7 +956,7 @@
         background: rgba(255, 255, 255, 0.98);
         border: 2px solid var(--primary-accent);
         border-radius: 12px;
-        box-shadow: 0 10px 30px rgba(15, 30, 54, 0.15);
+        box-shadow: 0 10px 30px rgba(18, 41, 71, 0.15);
         box-sizing: border-box;
         cursor: pointer;
         transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, border-color 0.3s ease;
@@ -978,7 +978,7 @@
       }
 
       .dark-theme .modal-card {
-        background: rgba(19, 26, 46, 0.98) !important;
+        background: rgba(13, 23, 38, 0.98) !important;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
         border-color: var(--primary-accent) !important;
       }
@@ -998,7 +998,7 @@
 
       .modal-card-wrapper:hover .modal-card {
         transform: scale(1.06);
-        box-shadow: 0 15px 40px rgba(245, 158, 11, 0.25);
+        box-shadow: 0 15px 40px rgba(207, 162, 64, 0.25);
         border-color: var(--secondary-accent);
       }
 
@@ -1040,7 +1040,7 @@
       }
 
       .quiz-option:hover {
-        background: rgba(245, 158, 11, 0.05);
+        background: rgba(207, 162, 64, 0.05);
         border-color: var(--primary-accent);
       }
 
@@ -1077,7 +1077,7 @@
       }
 
       .dash-menu li:hover, .dash-menu li.active {
-        background: rgba(15, 30, 54, 0.05);
+        background: rgba(18, 41, 71, 0.05);
         border-color: var(--bg-navy);
         color: var(--bg-navy);
       }
@@ -1110,7 +1110,7 @@
 
       .faq-item:hover {
         border-color: var(--primary-accent);
-        box-shadow: 0 8px 20px rgba(15, 30, 54, 0.04);
+        box-shadow: 0 8px 20px rgba(18, 41, 71, 0.04);
       }
 
       .faq-question {
@@ -1187,19 +1187,19 @@
         border-color: var(--primary-accent);
         color: var(--bg-navy);
         transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(245, 158, 11, 0.15);
+        box-shadow: 0 6px 12px rgba(207, 162, 64, 0.15);
       }
 
       .tab-btn.active {
         background: var(--bg-navy);
         color: #ffffff;
         border-color: var(--bg-navy);
-        box-shadow: 0 8px 20px rgba(15, 30, 54, 0.2);
+        box-shadow: 0 8px 20px rgba(18, 41, 71, 0.2);
       }
 
       /* Dark theme tab overrides */
       .dark-theme .tab-btn {
-        background: rgba(19, 26, 46, 0.6) !important;
+        background: rgba(13, 23, 38, 0.6) !important;
         border-color: var(--border-light) !important;
         color: var(--text-secondary) !important;
       }
@@ -1207,19 +1207,19 @@
       .dark-theme .tab-btn:hover {
         border-color: var(--primary-accent) !important;
         color: #ffffff !important;
-        box-shadow: 0 6px 12px rgba(245, 158, 11, 0.15) !important;
+        box-shadow: 0 6px 12px rgba(207, 162, 64, 0.15) !important;
       }
 
       .dark-theme .tab-btn.active {
         background: var(--primary-accent) !important;
         color: #ffffff !important;
         border-color: var(--primary-accent) !important;
-        box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25) !important;
+        box-shadow: 0 8px 20px rgba(207, 162, 64, 0.25) !important;
       }
 
       /* Announcement Bar (Patti) Styles */
       .announcement-bar {
-        background: linear-gradient(90deg, var(--bg-navy) 0%, var(--secondary-accent) 50%, var(--primary-accent) 100%);
+        background: linear-gradient(90deg, var(--bg-navy) 0%, #1e3a8a 50%, var(--primary-accent) 100%);
         color: #ffffff;
         overflow: hidden;
         height: 34px;
@@ -1272,9 +1272,9 @@
 
       /* Dark Theme CSS Design System */
       .dark-theme {
-        --bg-primary: #0A0F1D;          /* Premium pitch dark navy */
-        --bg-secondary: #131A2E;        /* Slate dark navy for cards */
-        --bg-tertiary: #1E294B;         /* Faint gray navy for active elements/hovers */
+        --bg-primary: #070e17;          /* Premium pitch dark navy */
+        --bg-secondary: #0d1726;        /* Slate dark navy for cards */
+        --bg-tertiary: #142238;         /* Faint gray navy for active elements/hovers */
         
         --bg-navy: #ffffff;             /* Text navy is converted to white */
         --text-primary: #ffffff;
@@ -1299,13 +1299,13 @@
         background-color: var(--bg-primary);
         color: var(--text-secondary);
         background-image: 
-          radial-gradient(circle at 10% 20%, rgba(245, 158, 11, 0.08) 0%, transparent 45%),
-          radial-gradient(circle at 90% 80%, rgba(20, 184, 166, 0.08) 0%, transparent 45%),
+          radial-gradient(circle at 10% 20%, rgba(207, 162, 64, 0.08) 0%, transparent 45%),
+          radial-gradient(circle at 90% 80%, rgba(15, 163, 150, 0.08) 0%, transparent 45%),
           radial-gradient(rgba(255, 255, 255, 0.06) 1.2px, transparent 1.2px) !important;
       }
 
       .dark-theme header.header {
-        background: rgba(10, 15, 29, 0.85) !important;
+        background: rgba(7, 14, 23, 0.85) !important;
         backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border-light) !important;
         box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
@@ -1348,7 +1348,7 @@
       .dark-theme .glass-gold {
         background: var(--bg-secondary) !important;
         border-color: var(--primary-accent) !important;
-        box-shadow: 0 4px 20px rgba(245, 158, 11, 0.05) !important;
+        box-shadow: 0 4px 20px rgba(207, 162, 64, 0.05) !important;
       }
 
       .dark-theme .glass-blue {
@@ -1367,12 +1367,12 @@
       }
 
       .dark-theme .btn-blue {
-        background: var(--bg-tertiary) !important;
+        background: #112641 !important;
         color: #ffffff !important;
       }
 
       .dark-theme .btn-blue:hover {
-        background: #253562 !important;
+        background: #19385f !important;
       }
 
       .dark-theme .btn-outline {
@@ -1458,7 +1458,7 @@
       }
 
       .theme-toggle-btn:hover {
-        background: rgba(15, 30, 54, 0.06);
+        background: rgba(18, 41, 71, 0.06);
       }
 
       .dark-theme .theme-toggle-btn {
@@ -1476,7 +1476,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: #0A0F1D; /* Matches Dark Theme canvas */
+        background: #070e17; /* Matches Dark Theme canvas */
         z-index: 9999;
         display: flex;
         align-items: center;
@@ -1515,7 +1515,7 @@
       .preloader-spinner {
         width: 48px;
         height: 48px;
-        border: 3px solid rgba(245, 158, 11, 0.1);
+        border: 3px solid rgba(207, 162, 64, 0.1);
         border-top-color: var(--primary-accent);
         border-radius: 50%;
         animation: spin 1s linear infinite;
@@ -1543,12 +1543,12 @@
         0%, 100% {
           transform: scale(0.98);
           opacity: 0.8;
-          text-shadow: 0 0 10px rgba(245, 158, 11, 0.1);
+          text-shadow: 0 0 10px rgba(207, 162, 64, 0.1);
         }
         50% {
           transform: scale(1.02);
           opacity: 1;
-          text-shadow: 0 0 25px rgba(245, 158, 11, 0.4);
+          text-shadow: 0 0 25px rgba(207, 162, 64, 0.4);
         }
       }
 
@@ -1680,7 +1680,7 @@
               <a href="https://wa.me/923255224480" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: #25d366;" onmouseover="this.style.background='rgba(37, 211, 102, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
               </a>
-              <a href="mailto:growthmatrixdigital@gmail.com" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: var(--primary-accent);" onmouseover="this.style.background='rgba(245, 158, 11, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
+              <a href="mailto:growthmatrixdigital@gmail.com" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: var(--primary-accent);" onmouseover="this.style.background='rgba(207, 162, 64, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
               </a>
               <a href="https://www.instagram.com/growthmatrixdigital" target="_blank" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: center; transition: var(--transition-smooth); color: #e1306c;" onmouseover="this.style.background='rgba(225, 48, 108, 0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.06)'">
@@ -1715,10 +1715,10 @@
               <p style="margin: 0;"><span style="color: var(--primary-accent);">📸</span> Instagram: <a href="https://www.instagram.com/growthmatrixdigital" target="_blank" style="color: #cbd5e1; text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-accent)'" onmouseout="this.style.color='#cbd5e1'">@growthmatrixdigital</a></p>
               <p style="margin: 0;"><span style="color: var(--primary-accent);">🧵</span> Threads: <a href="https://www.instagram.com/growthmatrixdigital" target="_blank" style="color: #cbd5e1; text-decoration: none; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-accent)'" onmouseout="this.style.color='#cbd5e1'">@growthmatrixdigital</a></p>
               <div style="margin-top: 5px; display: flex; gap: 8px; flex-wrap: wrap;">
-                <a href="https://chat.whatsapp.com/BjNod9t9qmYKbw0cL18Pym" target="_blank" class="btn btn-gold" style="font-size: 0.75rem; text-transform: none; padding: 8px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2); color: #ffffff;">
+                <a href="https://chat.whatsapp.com/BjNod9t9qmYKbw0cL18Pym" target="_blank" class="btn btn-gold" style="font-size: 0.75rem; text-transform: none; padding: 8px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(207, 162, 64, 0.2); color: #ffffff;">
                   💬 Join WhatsApp Group
                 </a>
-                <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" style="font-size: 0.75rem; text-transform: none; padding: 8px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(20, 184, 166, 0.2); color: #ffffff;">
+                <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal" style="font-size: 0.75rem; text-transform: none; padding: 8px 16px; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px; box-shadow: 0 4px 10px rgba(15, 163, 150, 0.2); color: #ffffff;">
                   📢 Join Channel
                 </a>
               </div>
@@ -2036,46 +2036,42 @@
             </section>
 
             <!-- Stats Section -->
-            <section class="section-padding" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light)">
-              <div class="container">
-                <div class="stats-grid">
-                  <div class="stat-card glass card-flat">
-                    <div class="stat-number"><span class="count-up" data-target="100000">0</span>+</div>
-                    <div class="stat-label">Youth Mission</div>
-                  </div>
-                  <div class="stat-card glass card-flat">
-                    <div class="stat-number"><span class="count-up" data-target="2026">0</span></div>
-                    <div class="stat-label">Founding Year</div>
-                  </div>
-                  <div class="stat-card glass card-flat">
-                    <div class="stat-number"><span class="count-up" data-target="4">0</span></div>
-                    <div class="stat-label">Advanced Courses</div>
-                  </div>
-                  <div class="stat-card glass card-flat">
-                    <div class="stat-number">24/7</div>
-                    <div class="stat-label">Seniors Support</div>
-                  </div>
+            <section class="section-padding container" style="border-top: 1px solid var(--border-light)">
+              <div class="stats-grid">
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="100000">0</span>+</div>
+                  <div class="stat-label">Youth Mission</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="2026">0</span></div>
+                  <div class="stat-label">Founding Year</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number"><span class="count-up" data-target="4">0</span></div>
+                  <div class="stat-label">Advanced Courses</div>
+                </div>
+                <div class="stat-card glass card-flat">
+                  <div class="stat-number">24/7</div>
+                  <div class="stat-label">Seniors Support</div>
                 </div>
               </div>
             </section>
 
             <!-- Prominent WhatsApp Group & Channel Alert Banner -->
-            <section class="section-padding" style="padding-top: 10px; padding-bottom: 40px;">
-              <div class="container">
-                <div class="glass glass-gold" style="padding: 24px; text-align: center; border: 2px solid var(--primary-accent);">
-                  <span class="badge badge-gold" style="margin-bottom: 12px;">Official Updates</span>
-                  <h3 style="color: var(--bg-navy); margin-bottom: 10px;">GMD Ka Official WhatsApp Group Aur Channel Join Karein</h3>
-                  <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                    Important announcements, courses details, fee structure, batch timings aur free learning updates haasil karne ke liye hamare official WhatsApp groups aur channel ko join karein.
-                  </p>
-                  <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://chat.whatsapp.com/BjNod9t9qmYKbw0cL18Pym" target="_blank" class="btn btn-gold">
-                      💬 Join WhatsApp Updates Group
-                    </a>
-                    <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal">
-                      📢 Follow Broadcast Channel
-                    </a>
-                  </div>
+            <section class="container" style="margin-bottom: 40px;">
+              <div class="glass glass-gold" style="padding: 24px; text-align: center; border: 2px solid var(--primary-accent);">
+                <span class="badge badge-gold" style="margin-bottom: 12px;">Official Updates</span>
+                <h3 style="color: var(--bg-navy); margin-bottom: 10px;">GMD Ka Official WhatsApp Group Aur Channel Join Karein</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 20px; font-size: 0.95rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                  Important announcements, courses details, fee structure, batch timings aur free learning updates haasil karne ke liye hamare official WhatsApp groups aur channel ko join karein.
+                </p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                  <a href="https://chat.whatsapp.com/BjNod9t9qmYKbw0cL18Pym" target="_blank" class="btn btn-gold">
+                    💬 Join WhatsApp Updates Group
+                  </a>
+                  <a href="https://whatsapp.com/channel/0029VbCiZtyL2ATtaizKOj3M" target="_blank" class="btn btn-teal">
+                    📢 Follow Broadcast Channel
+                  </a>
                 </div>
               </div>
             </section>
@@ -2130,38 +2126,36 @@
             </section>
 
             <!-- Testimonials Grid Preview -->
-            <section class="section-padding">
-              <div class="container">
-                <div style="text-align: center; margin-bottom: 45px;">
-                  <div class="badge badge-gold" style="margin-bottom: 12px;">Success Stories</div>
-                  <h2>Hamare Students Ka Feedback</h2>
+            <section class="section-padding container">
+              <div style="text-align: center; margin-bottom: 45px;">
+                <div class="badge badge-gold" style="margin-bottom: 12px;">Success Stories</div>
+                <h2>Hamare Students Ka Feedback</h2>
+              </div>
+              <div class="grid-3">
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "GMD ki sabse achi baat inki live support hai. Coding me jab bhi issue aata hai support group me seniors help kar dete hain."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Hamza Khan (Lahore)</h4>
                 </div>
-                <div class="grid-3">
-                  <div class="glass card-flat" style="padding: 24px;">
-                    <span style="color: var(--primary-accent);">★★★★★</span>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
-                      "GMD ki sabse achi baat inki live support hai. Coding me jab bhi issue aata hai support group me seniors help kar dete hain."
-                    </p>
-                    <h4 style="margin-top: 16px; font-size: 0.95rem;">- Hamza Khan (Lahore)</h4>
-                  </div>
-                  <div class="glass card-flat" style="padding: 24px;">
-                    <span style="color: var(--primary-accent);">★★★★★</span>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
-                      "Rs. 300 me itna detail course mujhe poore Pakistan me kahin nahi mila. Abu Khabib bhai har sawal ka personally jawab dete hain."
-                    </p>
-                    <h4 style="margin-top: 16px; font-size: 0.95rem;">- Ayesha Siddiqui (Karachi)</h4>
-                  </div>
-                  <div class="glass card-flat" style="padding: 24px;">
-                    <span style="color: var(--primary-accent);">★★★★★</span>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
-                      "Live session ke baad video recordings milne se practice karna bohat aasan ho jata hai. GMD 2026 ka behtareen platform hai."
-                    </p>
-                    <h4 style="margin-top: 16px; font-size: 0.95rem;">- Bilal Ahmad (Faisalabad)</h4>
-                  </div>
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "Rs. 300 me itna detail course mujhe poore Pakistan me kahin nahi mila. Abu Khabib bhai har sawal ka personally jawab dete hain."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Ayesha Siddiqui (Karachi)</h4>
                 </div>
-                <div style="text-align: center; margin-top: 35px;">
-                  <a href="#/reviews" class="btn btn-outline">Read All Reviews</a>
+                <div class="glass card-flat" style="padding: 24px;">
+                  <span style="color: var(--primary-accent);">★★★★★</span>
+                  <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 12px; line-height: 1.6;">
+                    "Live session ke baad video recordings milne se practice karna bohat aasan ho jata hai. GMD 2026 ka behtareen platform hai."
+                  </p>
+                  <h4 style="margin-top: 16px; font-size: 0.95rem;">- Bilal Ahmad (Faisalabad)</h4>
                 </div>
+              </div>
+              <div style="text-align: center; margin-top: 35px;">
+                <a href="#/reviews" class="btn btn-outline">Read All Reviews</a>
               </div>
             </section>
 
@@ -2557,7 +2551,7 @@
                         
                         return `
                           <div style="display: flex; gap: 15px; align-items: flex-start; position: relative; z-index: 2;">
-                            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--bg-navy); border: 2.5px solid var(--primary-accent); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; font-family: var(--font-tech); flex-shrink: 0; box-shadow: 0 4px 10px rgba(15, 30, 54, 0.25); box-sizing: border-box;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: var(--bg-navy); border: 2.5px solid var(--primary-accent); color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: bold; font-family: var(--font-tech); flex-shrink: 0; box-shadow: 0 4px 10px rgba(18, 41, 71, 0.25); box-sizing: border-box;">
                               W${idx + 1}
                             </div>
                             <div class="glass" style="flex: 1; padding: 16px 20px; background: var(--bg-secondary); border-radius: 8px; border-left: 3px solid var(--primary-accent); text-align: left; transition: var(--transition-smooth); box-sizing: border-box;">
@@ -2902,7 +2896,7 @@
               </div>
 
               <div class="id-card-wrapper" style="max-width: 380px; margin-top: 20px; text-align: left;">
-                <div class="glass glass-blue" style="border: 2px solid var(--bg-navy); border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 10px 30px rgba(15, 30, 54, 0.12); border-color: var(--primary-accent);">
+                <div class="glass glass-blue" style="border: 2px solid var(--bg-navy); border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 10px 30px rgba(18, 41, 71, 0.12); border-color: var(--primary-accent);">
                   <!-- Gold header strip -->
                   <div style="background: var(--bg-navy); padding: 12px 18px; border-bottom: 3px solid var(--primary-accent); display: flex; justify-content: space-between; align-items: center;">
                     <div style="display: flex; align-items: center; gap: 8px;">
